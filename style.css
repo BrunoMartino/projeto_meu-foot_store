@@ -1,0 +1,16 @@
+/*
+Template name: Meu Foot
+*/
+
+/*global archives*/
+@import "./CSS/global.css";
+@import "./CSS/componentes.css";
+@import "./CSS/tipografia.css";
+@import "./CSS/cores.css";
+
+/*header*/
+@import "./CSS/header.css";
+/*dropdown Menu on header*/
+@import "./CSS/dropdownMenu.css";
+@import url("./CSS/menu-mobile.css");
+@import url("./CSS/responsible.css");

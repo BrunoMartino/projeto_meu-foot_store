@@ -1,0 +1,21 @@
+{
+  "name": "meu_foot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --watch --entry ./js/script.js -o ./main/",
+    "build": "webpack --mode production --entry ./js/script.js -o ./main/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.8.0"
+  }
+}

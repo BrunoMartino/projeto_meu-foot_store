@@ -1,0 +1,207 @@
+/*control promo bar*/
+.header__faixa {
+  background-color: var(--az-01);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+/*control main menu grid and logo*/
+.header__main {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  margin: 6px 24px;
+}
+.header__main--logo {
+  display: block;
+  max-width: 200px;
+  min-width: 164px;
+  height: 100%;
+}
+/*control user menu flexbox*/
+
+.header__main--user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+.grid-mobile {
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+/*control searchbar*/
+.header__main--busca form {
+  display: grid;
+}
+.header__main--busca #s {
+  border: 2px solid var(--rs-01);
+  background: var(--cz-01);
+  width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 4px 60px 4px 20px;
+  grid-area: 1/1;
+}
+
+.header__main #s:focus {
+  background: var(--cz-00);
+  border: 3px solid var(--az-01) !important;
+  box-shadow: 0 2px 4px var(--cz-00);
+}
+
+.header__main--busca #searchbutton {
+  grid-area: 1/1;
+  width: 36px;
+  height: 36px;
+  justify-self: end;
+  text-indent: -10000px;
+  background: url("../img-meufoot/icones/busca.svg") center center no-repeat;
+  cursor: pointer;
+  background-position: -1;
+  border: none;
+}
+
+/*controls sign up and sign in buttons*/
+.menu-login ul {
+  padding-top: 8px;
+  display: flex;
+  gap: 24px;
+}
+.header__login--cadastro a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.00375rem;
+  gap: 4px;
+}
+.header__login--cadastro a::before {
+  display: inline-block;
+  content: "";
+  background: url("../img-meufoot/icones/criar_conta.svg") center center
+    no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.header__login--minha-conta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.00375rem;
+  gap: 4px;
+}
+.header__login--minha-conta a::before {
+  display: inline-block;
+  content: "";
+  background: url("../img-meufoot/icones/login.svg") center center no-repeat;
+  width: 20px;
+  height: 20px;
+}
+/*control cart and whishlist button*/
+.header__main--mini-menu {
+  display: flex;
+  justify-content: right;
+  margin-left: 24px;
+  gap: 16px;
+}
+.mini-menu-item a {
+  display: flex;
+  align-items: center;
+}
+.carrinho {
+  position: relative;
+}
+.carrinho_cont {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: var(--az-04);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--cz-01);
+  position: absolute;
+  top: -5px;
+  left: 11px;
+}
+/*control Parent Category Menu*/
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.menu li {
+  width: 148px;
+  height: 64px;
+  background: var(--cz-01);
+  border: 2px solid var(--az-01);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.menu li:nth-child(odd),
+.menu li:nth-child(even) {
+  border-right: none;
+}
+.menu li:first-child {
+  border-left: none;
+}
+.menu li:hover {
+  border: none;
+  border-bottom: 4px solid var(--rs-01);
+  background-color: var(--cz-00);
+}
+.menu a {
+  display: block;
+  padding: 6px 24px;
+  color: var(--az-04);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: 0.02;
+  text-align: center;
+  align-self: center;
+}
+.menu li:first-child,
+.menu li:nth-child(2),
+.menu li:nth-child(3),
+.menu li:nth-child(4) {
+  padding-top: 12px;
+}
+/*controls advantage bar*/
+.header__main--vantagens {
+  background: var(--rs-01);
+  padding: 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-width: 260px;
+}
+.header__main--vantagens-item {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 8px;
+}
+.header__main--vantagens-item:nth-child(2) {
+  gap: 4px;
+}
+.header__main--vantagens-item p:nth-child(2) {
+  margin-top: 8px;
+}
+.header__main--vantagens-item:first-child,
+.header__main--vantagens-item:nth-child(3) {
+  padding-top: 4px;
+}

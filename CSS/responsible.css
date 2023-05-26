@@ -1,0 +1,35 @@
+@media (max-width: 990px) {
+  .header__faixa {
+    font-size: 0.65rem;
+    padding: 8px 0;
+    margin-bottom: 6px;
+  }
+  .header__main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header__main--logo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .mini-menu-item p {
+    display: none;
+  }
+  .grid-mobile {
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+  }
+  .header__main--busca #s {
+    width: 156px;
+    display: flex;
+    background-color: var(--cz-01);
+  }
+  .header__main--vantagens p {
+    font-size: 0.85rem;
+  }
+  .menu a {
+    text-align: left;
+  }
+}
