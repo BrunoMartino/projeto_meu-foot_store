@@ -3,9 +3,11 @@
   background-color: var(--az-01);
   padding: 12px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+  margin: 0 auto;
 }
 /*control main menu grid and logo*/
 .header__main {
