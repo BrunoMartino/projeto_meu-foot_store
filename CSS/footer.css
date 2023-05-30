@@ -1,0 +1,195 @@
+/*controls footer bg and geral footer-menus flexbox*/
+.footer__bg {
+  background: var(--cz-01);
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  margin-bottom: 48px;
+}
+.footer__content--categorias h3,
+.footer__content--contact h3,
+.footer__content--intern-pages h3 {
+  margin-bottom: 16px;
+}
+/*controls category footer-menu*/
+.footer__content--categorias {
+  display: flex;
+  flex-direction: column;
+}
+.footer__content--categorias-gridbox .menu-item-has-children:hover > .sub-menu {
+  display: none;
+}
+.footer__content--categorias-gridbox .menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 56px;
+}
+.footer__content--categorias-gridbox .menu li {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  border: none;
+  border-top: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+.footer__content--categorias-gridbox .menu li:first-child,
+.footer__content--categorias-gridbox .menu li:nth-child(2),
+.footer__content--categorias-gridbox .menu li:nth-child(3),
+.footer__content--categorias-gridbox .menu li:nth-child(4) {
+  padding-top: 0px;
+}
+.footer__content--categorias-gridbox .menu a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  display: block;
+  padding: 0;
+  color: var(--rs-04);
+  text-align: left;
+  max-width: 120ch;
+  display: flex;
+  align-items: center;
+}
+.footer__content--categorias-gridbox .menu a::before {
+  content: "";
+  display: block;
+  background: var(--rs-04);
+  width: 8px;
+  height: 2px;
+  margin-right: 4px;
+}
+.footer__content--categorias-gridbox .menu-item a:hover {
+  color: var(--rs-02);
+}
+.footer__content--categorias-gridbox .menu a:hover:before {
+  width: 20px;
+  height: 20px;
+  background: url("../img-meufoot/icones/heart-fill.svg") center center
+    no-repeat;
+}
+
+/*controls contact footer-menu*/
+.footer__content--contact {
+  display: flex;
+  flex-direction: column;
+}
+.footer__content--contact li {
+  margin-bottom: 16px;
+}
+.email a,
+.wapp a {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.email a:hover,
+.wapp a:hover {
+  color: var(--rs-02);
+}
+.email a::before {
+  content: "";
+  display: block;
+  background: url("../img-meufoot/icones/envelope-fill.svg") center center
+    no-repeat;
+  width: 24px;
+  height: 20px;
+  margin-right: 8px;
+}
+.wapp a::before {
+  content: "";
+  display: block;
+  background: url("../img-meufoot/icones/whatsapp.svg") center center no-repeat;
+  width: 24px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+/*controls useful links footer-menu*/
+.footer__content--intern-pages {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.footer__content--intern-pages li {
+  margin-bottom: 16px;
+}
+.footer__content--intern-pages a {
+  text-align: left;
+  max-width: 120ch;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+.footer__content--intern-pages a::before {
+  content: "";
+  display: block;
+  background: var(--rs-04);
+  width: 8px;
+  height: 2px;
+  margin-right: 4px;
+}
+.footer__content--intern-pages a:hover {
+  color: var(--rs-02);
+}
+.footer__content--intern-pages a:hover:before {
+  width: 20px;
+  height: 20px;
+  background: url("../img-meufoot/icones/heart-fill.svg") center center
+    no-repeat;
+}
+/*controls footer end*/
+.footer__content--end {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 48px;
+  margin-bottom: 24px;
+  border-top: 4px solid var(--cz-04);
+}
+/*controls media query*/
+
+@media (max-width: 960px) {
+  .footer__content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .footer__content--contact {
+    order: 3;
+  }
+  .footer__content--end {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+  }
+  .footer__content--end p {
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .footer__content {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .footer__content--contact {
+    margin-top: 16px;
+  }
+  .footer__content--categorias h3,
+  .footer__content--contact h3,
+  .footer__content--intern-pages h3 {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+  .footer__content--categorias-gridbox .menu {
+    gap: 8px 28px;
+  }
+  .footer__content--contact li,
+  .footer__content--intern-pages li {
+    margin-bottom: 8px;
+  }
+}

@@ -51,16 +51,15 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
-  text-transform: lowercase;
 }
 .font-1-up-l {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;

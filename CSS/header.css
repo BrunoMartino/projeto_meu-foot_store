@@ -207,3 +207,61 @@
 .header__main--vantagens-item:nth-child(3) {
   padding-top: 4px;
 }
+/*controls media query header-menu*/
+@media (max-width: 960px) {
+  .header__faixa {
+    font-size: 0.65rem;
+    padding: 8px 0;
+    margin-bottom: 6px;
+  }
+  .header__main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header__main--logo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .mini-menu-item p {
+    display: none;
+  }
+  .grid-mobile {
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+  }
+  .header__main--busca #s {
+    width: 156px;
+    display: flex;
+    background-color: var(--cz-01);
+  }
+  .header__main--vantagens p {
+    font-size: 0.85rem;
+  }
+  .menu a {
+    text-align: left;
+  }
+}
+@media (max-width: 420px) {
+  .header__main--busca #s {
+    width: 124px;
+    font-size: 0.75rem;
+  }
+  .mini-menu-item img {
+    max-width: 24px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  .header__faixa p {
+    max-width: 40ch;
+  }
+  .grid-mobile {
+    top: 54px;
+  }
+  .header__main--vantagens p {
+    font-size: 0.75rem;
+  }
+}
