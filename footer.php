@@ -1,5 +1,5 @@
 
-<footer class="footer__bg">
+  <footer class="footer__bg">
     <div class="footer__content container">
       <div class="footer__content--categorias">
         <h3 class="font-1-up-l rs-02">Categorias:</h3>

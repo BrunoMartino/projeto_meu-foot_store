@@ -1,12 +1,20 @@
-<?php get_header();?>
-
+<?php get_header(); ?>
 <?php 
-if(have_posts()){while(have_posts()){the_post();?>
+if (have_posts()) { while (have_posts()) { the_post(); ?>
+    
+ <section class="container slide-galeria">
+    <?php cmb2_slide_file_list('add_slide_home', $image_size = "large") ?>
+ </section>   
 
-<?php 
-$img_url = get_template_directory_uri() . '/img-meufoot/logo';?>
 
-<div><img src="<?= $img_url . '/neom.jpg' ?>" alt=""></div>
+
+
+
+
+
+
+
+
 
 <?php } } ?>
-<?php get_footer();?>
+<?php get_footer(); ?>

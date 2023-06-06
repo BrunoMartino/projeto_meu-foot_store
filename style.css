@@ -10,7 +10,13 @@ Template name: Meu Foot
 
 /*header*/
 @import "./CSS/header.css";
-/*dropdown Menu on header*/
+
+/*footer*/
+@import url("./CSS/footer.css");
+
+/*dropdown and mobile Menu on header*/
 @import "./CSS/dropdownMenu.css";
 @import url("./CSS/menu-mobile.css");
-@import url("./CSS/responsible.css");
+
+/*page-home objects*/
+@import url("./CSS/slide.css");

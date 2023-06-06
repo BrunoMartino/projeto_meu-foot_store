@@ -12,4 +12,6 @@ function meufoot_css() {
 
 add_action('wp_enqueue_scripts', 'meufoot_css');
 
+require_once get_template_directory() . '/cmb2/load.php'
+
 ?>

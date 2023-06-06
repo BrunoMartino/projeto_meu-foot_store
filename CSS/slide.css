@@ -1,0 +1,25 @@
+.slide-galeria {
+  display: grid;
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.slide-wrapper {
+  overflow: hidden;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.slide {
+  display: flex;
+}
+
+.slide li {
+  flex-shrink: 0;
+  width: 100vw;
+  max-width: 960px;
+  margin: 0 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}

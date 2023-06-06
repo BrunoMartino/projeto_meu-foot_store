@@ -12,6 +12,7 @@
 .footer__content--contact h3,
 .footer__content--intern-pages h3 {
   margin-bottom: 16px;
+  font-size: 1.25rem;
 }
 /*controls category footer-menu*/
 .footer__content--categorias {
