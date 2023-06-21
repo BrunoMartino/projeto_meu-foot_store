@@ -11,3 +11,69 @@
 .ativo {
   display: flex;
 }
+
+/* controls product-box on home page and search, category and store page */
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+.product-item h2 {
+  font-size: 1.25rem;
+  padding: 8px 0px 24px 8px;
+}
+.product-item {
+  border-radius: 4px 0 4px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--az-01);
+  max-height: 460px;
+  position: relative;
+}
+.product-item::before {
+  content: "frete grátis";
+  display: block;
+  position: absolute;
+  top: 12px;
+  background: var(--az-01);
+  color: var(--az-05);
+  padding: 8px 12px;
+  border-radius: 0 12px 12px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.03;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s;
+  opacity: 0;
+}
+.product-item:hover:before {
+  width: max-content;
+  opacity: 1;
+}
+
+.product-item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.reg-price {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-decoration: line-through;
+  letter-spacing: 0.02rem;
+}
+.product-item__info-btn span {
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.product-item:hover .product-item__info-btn span {
+  background-color: var(--az-01);
+  color: var(--az-05);
+}

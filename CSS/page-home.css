@@ -1,0 +1,38 @@
+.chrono-galeria,
+.newest-galeria,
+.most_sales-galeria {
+  margin-bottom: 60px;
+}
+.chrono-galeria .product-list {
+  flex-wrap: nowrap;
+}
+
+.chrono-galeria::before,
+.newest-galeria::before,
+.most_sales-galeria::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100vw;
+  background: var(--cz-02);
+  margin-bottom: 60px;
+}
+
+.chrono-galeria h1,
+.newest-galeria h1,
+.most_sales-galeria h1 {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.chrono-galeria h1:before,
+.newest-galeria h1:before,
+.most_sales-galeria h1:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 36px;
+  background: var(--rs-03);
+  margin-right: 12px;
+}
