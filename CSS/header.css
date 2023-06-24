@@ -6,20 +6,34 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
   margin: 0 auto;
 }
 /*control main menu grid and logo*/
 .header__main {
   display: grid;
   grid-template-columns: 260px 1fr;
-  margin: 6px 24px;
+  margin: 24px 24px 0 24px;
 }
 .header__main--logo {
   display: block;
   max-width: 200px;
   min-width: 164px;
   height: 100%;
+  transition: 2s;
+  animation: pulse 2s infinite;
+  animation-delay: 300ms;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
 /*control user menu flexbox*/
 
@@ -108,7 +122,7 @@
   display: flex;
   justify-content: right;
   margin-left: 24px;
-  gap: 16px;
+  gap: 14px;
 }
 .mini-menu-item a {
   display: flex;
@@ -116,6 +130,7 @@
 }
 .carrinho {
   position: relative;
+  padding-right: 16px;
 }
 .carrinho_cont {
   display: block;
@@ -164,13 +179,14 @@
 }
 .menu a {
   display: block;
-  padding: 6px 24px;
+  box-sizing: border-box;
   color: var(--az-04);
-  font-weight: 500;
+  padding-top: 8px;
+  font-weight: 700;
   text-transform: uppercase;
   font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.125rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.12rem;
   line-height: 1.2;
   letter-spacing: 0.02;
   text-align: center;
@@ -185,7 +201,7 @@
 /*controls advantage bar*/
 .header__main--vantagens {
   background: var(--rs-01);
-  padding: 4px 0;
+  padding: 12px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -199,13 +215,6 @@
 }
 .header__main--vantagens-item:nth-child(2) {
   gap: 4px;
-}
-.header__main--vantagens-item p:nth-child(2) {
-  margin-top: 8px;
-}
-.header__main--vantagens-item:first-child,
-.header__main--vantagens-item:nth-child(3) {
-  padding-top: 4px;
 }
 /*controls media query header-menu*/
 @media (max-width: 960px) {

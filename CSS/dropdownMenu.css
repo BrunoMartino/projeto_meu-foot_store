@@ -4,7 +4,7 @@
   align-items: center;
   position: absolute;
   z-index: 200;
-  top: 172px;
+  top: 190px;
 }
 .menu .sub-menu::before {
   display: block;

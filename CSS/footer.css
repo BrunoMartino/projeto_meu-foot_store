@@ -1,12 +1,11 @@
 /*controls footer bg and geral footer-menus flexbox*/
 .footer__bg {
-  background: var(--cz-01);
+  background: var(--cz-02);
 }
 .footer__content {
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  margin-bottom: 48px;
 }
 .footer__content--categorias h3,
 .footer__content--contact h3,
@@ -44,9 +43,9 @@
   padding-top: 0px;
 }
 .footer__content--categorias-gridbox .menu a {
-  font-family: "Roboto";
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
   display: block;
@@ -87,7 +86,7 @@
 .wapp a {
   display: flex;
   align-items: center;
-  font-weight: 400;
+  font-weight: 500;
 }
 .email a:hover,
 .wapp a:hover {

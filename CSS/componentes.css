@@ -31,6 +31,18 @@
   max-height: 460px;
   position: relative;
 }
+
+.product-item.disabled:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 9999999;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  cursor: pointer;
+}
+
 .product-item::before {
   content: "frete grátis";
   display: block;
@@ -40,11 +52,11 @@
   color: var(--az-05);
   padding: 8px 12px;
   border-radius: 0 12px 12px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.03;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   transition: 0.3s;
   opacity: 0;
@@ -62,7 +74,7 @@
 }
 .reg-price {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   text-decoration: line-through;
   letter-spacing: 0.02rem;
@@ -76,4 +88,17 @@
 .product-item:hover .product-item__info-btn span {
   background-color: var(--az-01);
   color: var(--az-05);
+}
+
+/*controls timer on promo products*/
+
+.item-timer p {
+  text-align: center;
+  font-family: "Chewy", "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--rs-03);
+  background-color: var(--cz-01);
+  padding: 16px;
+  border-top: 1px solid var(--az-01);
 }

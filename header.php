@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
   <title><?php bloginfo('name');?> <?php wp_title('|'); ?></title>
   <?php wp_head();?>
 </head>
@@ -45,11 +45,6 @@ $cart_count = WC()->cart->get_cart_contents_count();
        </form>
     </div>
     <nav class="header__main--mini-menu">
-     <div class=mini-menu-item>
-       <a href="/lista-de-desejos/"><img src="<?= $icon_url . '/add_Fav.svg' ?>" alt="">
-      <p class="font-1-up-xs rs-05" >Seus <br> Desejos</p>
-      </a>
-     </div>
      <div class=mini-menu-item>
        <a class="carrinho" href="carrinho/"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="">
         <?php if($cart_count) { ?>
