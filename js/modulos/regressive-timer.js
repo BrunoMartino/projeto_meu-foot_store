@@ -40,7 +40,7 @@ export default class RegressiveTimer {
       clock.innerHTML = `<p>${remainHours}:${remainMin}:${remainSec}</p>`;
 
       if (totalTime <= 0) {
-        clock.innerHTML = `<p>Promoção Acabou</p>`;
+        clock.innerHTML = `<p>Promoção Esgotou</p>`;
         clearInterval(timeInterval);
         clock.parentNode.classList.add("disabled");
         this.updateTimerData(index, 0);

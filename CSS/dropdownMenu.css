@@ -1,12 +1,12 @@
 /*control dropdown menu*/
-.sub-menu {
+#menu-categorias .sub-menu {
   flex-direction: column;
   align-items: center;
   position: absolute;
   z-index: 200;
   top: 190px;
 }
-.menu .sub-menu::before {
+#menu-categorias .sub-menu::before {
   display: block;
   content: "";
   width: 20px;
@@ -19,7 +19,7 @@
   left: -5px;
 }
 
-.menu .sub-menu li {
+#menu-categorias .sub-menu li {
   padding: 8px 12px;
   font-size: 0.85rem;
   max-width: 25ch;
@@ -29,32 +29,32 @@
   border-bottom: 2px solid var(--cz-02);
   cursor: pointer;
 }
-.menu .sub-menu li:last-child {
+#menu-categorias .sub-menu li:last-child {
   border: none;
 }
-.menu .sub-menu li:hover {
+#menu-categorias .sub-menu li:hover {
   font-size: 1rem;
   background: var(--cz-00);
   border-bottom: 3px solid var(--rs-01);
 }
-.menu .sub-menu li:hover > a {
+#menu-categorias .sub-menu li:hover > a {
   color: var(--rs-02);
 }
-.menu .sub-menu a {
+#menu-categorias .sub-menu a {
   font-size: 1rem;
   text-align: left;
   padding: 12px 24px;
   margin-bottom: 8px;
 }
 
-.menu .sub-menu a:hover:after {
+#menu-categorias .sub-menu a:hover:after {
   display: none;
 }
 
-.menu .sub-menu {
+#menu-categorias .sub-menu {
   display: none;
 }
-.menu-item-has-children:hover > .sub-menu {
+#menu-categorias .menu-item-has-children:hover > .sub-menu {
   display: flex;
   animation: show-up 0.3s forwards;
 }

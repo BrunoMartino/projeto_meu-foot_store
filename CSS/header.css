@@ -150,12 +150,12 @@
 }
 /*control Parent Category Menu*/
 
-.menu {
+#menu-categorias.menu {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
-.menu li {
+#menu-categorias.menu li {
   width: 148px;
   height: 64px;
   background: var(--cz-01);
@@ -165,19 +165,19 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.menu li:nth-child(odd),
-.menu li:nth-child(even) {
+#menu-categorias.menu li:nth-child(odd),
+#menu-categorias.menu li:nth-child(even) {
   border-right: none;
 }
-.menu li:first-child {
+#menu-categorias.menu li:first-child {
   border-left: none;
 }
-.menu li:hover {
+#menu-categorias.menu li:hover {
   border: none;
   border-bottom: 4px solid var(--rs-01);
   background-color: var(--cz-00);
 }
-.menu a {
+#menu-categorias.menu a {
   display: block;
   box-sizing: border-box;
   color: var(--az-04);
@@ -192,10 +192,10 @@
   text-align: center;
   align-self: center;
 }
-.menu li:first-child,
-.menu li:nth-child(2),
-.menu li:nth-child(3),
-.menu li:nth-child(4) {
+#menu-categorias.menu li:first-child,
+#menu-categorias.menu li:nth-child(2),
+#menu-categorias.menu li:nth-child(3),
+#menu-categorias.menu li:nth-child(4) {
   padding-top: 12px;
 }
 /*controls advantage bar*/

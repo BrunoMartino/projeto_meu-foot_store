@@ -1,0 +1,121 @@
+.breadcrumb {
+  display: flex;
+  justify-content: end;
+  padding: 32px 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  color: var(--cz-06);
+}
+.breadcrumb a {
+  color: var(--cz-04);
+}
+
+.products-archive {
+  display: flex;
+  gap: 60px;
+  padding: 0 32px;
+}
+
+.filters {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.filters h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.filters h1::after {
+  content: "";
+  display: block;
+  background: url("../img-meufoot/icones/filter-icon.svg");
+  width: 42px;
+  height: 42px;
+  margin-left: 8px;
+}
+.filter .widgettitle {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.05rem;
+}
+.filter,
+.filter .widget {
+  margin-bottom: 40px;
+}
+.filter .widget:last-child {
+  margin-bottom: 0;
+}
+
+.filter h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+.filter h2::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 8px;
+  background: var(--rs-03);
+  margin: 0 8px;
+}
+
+#menu-categorias-internas .menu {
+  display: flex;
+}
+
+/* control attribute nav style from woocommerce */
+.woocommerce-widget-layered-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.woocommerce
+  .woocommerce-widget-layered-nav-list
+  .woocommerce-widget-layered-nav-list__item
+  span {
+  display: none;
+}
+.woocommerce
+  .woocommerce-widget-layered-nav-list
+  .woocommerce-widget-layered-nav-list__item
+  a {
+  display: flex;
+  align-items: center;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.05rem;
+}
+
+.woocommerce
+  .woocommerce-widget-layered-nav-list
+  .woocommerce-widget-layered-nav-list__item
+  a:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--rs-03);
+  background: transparent;
+  margin-right: 8px;
+}
+.woocommerce
+  .woocommerce-widget-layered-nav-list
+  .woocommerce-widget-layered-nav-list__item--chosen
+  a:before {
+  background: var(--rs-03);
+}

@@ -29,9 +29,9 @@ $data['most_sales'] = format_products($products_most_sales, 'product-box');
 <?php 
 if(have_posts()){while(have_posts()){the_post();?>
 <section class="container slide-galeria">
-   <button class="prev"></button>
+   <button class="prev_btn"></button>
     <?php cmb2_slide_file_list('add_slide_home','add_slide_home_url',$image_size = "slide-image") ?>
-   <button class="next"></button>
+   <button class="next_btn"></button>
 </section>   
 <section class="container chrono-galeria">
   <h1 class="font-2-up-xl">Promoção Relâmpago</h1>

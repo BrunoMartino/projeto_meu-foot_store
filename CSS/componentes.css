@@ -102,3 +102,19 @@
   padding: 16px;
   border-top: 1px solid var(--az-01);
 }
+@media (max-width: 960px) {
+  .product-list {
+    justify-content: center;
+    gap: 32px;
+  }
+}
+@media (max-width: 420px) {
+  .product-item img {
+    max-width: 280px;
+    height: 100%;
+  }
+  .product-item:before {
+    width: max-content;
+    opacity: 1;
+  }
+}
