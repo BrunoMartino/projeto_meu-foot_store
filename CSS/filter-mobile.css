@@ -1,0 +1,65 @@
+.filter-mobile {
+  display: none;
+}
+@media (max-width: 660px) {
+  .product-archive {
+    position: relative;
+  }
+  .breadcrumb {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filter-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    background-color: var(--cz-02);
+    color: var(--cz-08);
+    padding: 6px 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Chewy", sans-serif;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    z-index: 200;
+  }
+  .filter-mobile:after {
+    content: "";
+    display: inline-block;
+    background: url("../img-meufoot/icones/filter-icon-2.svg") center center
+      no-repeat;
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+  }
+
+  .filters.ativo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--cz-01);
+    width: 240px;
+    z-index: 199;
+    top: 372px;
+    left: 20px;
+    padding: 60px 24px 10px 0px;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .filters h1 {
+    display: none;
+  }
+}
+@media (max-width: 325px) {
+  .breadcrumb {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}

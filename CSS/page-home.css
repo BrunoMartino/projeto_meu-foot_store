@@ -22,6 +22,7 @@
 .newest-galeria h1,
 .most_sales-galeria h1 {
   margin-bottom: 24px;
+  margin-left: 16px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -35,4 +36,32 @@
   height: 36px;
   background: var(--rs-03);
   margin-right: 12px;
+}
+@media (max-width: 960px) {
+  .chrono-galeria .product-list {
+    flex-wrap: wrap;
+  }
+  .chrono-galeria .product-list .product-item {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 420px) {
+  .chrono-galeria .product-list .product-item {
+    margin-bottom: 0;
+  }
+  .chrono-galeria h1,
+  .newest-galeria h1,
+  .most_sales-galeria h1 {
+    font-size: 2.5rem;
+  }
+  .chrono-galeria,
+  .newest-galeria,
+  .most_sales-galeria {
+    margin-bottom: 36px;
+  }
+  .chrono-galeria::before,
+  .newest-galeria::before,
+  .most_sales-galeria::before {
+    margin-bottom: 36px;
+  }
 }

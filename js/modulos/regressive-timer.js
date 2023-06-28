@@ -22,7 +22,7 @@ export default class RegressiveTimer {
       totalTime = timerData[index].remainTime;
     } else {
       const hours = index * 1;
-      const min = 40;
+      const min = 25;
       const sec = 20;
 
       totalTime = hours * 3600 + min * 60 + sec;

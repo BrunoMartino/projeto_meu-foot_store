@@ -114,7 +114,7 @@
 }
 @media (max-width: 740px) {
   .prev_btn,
-  .next {
+  .next_btn {
     display: none;
   }
 }
@@ -123,10 +123,6 @@
   .slide li img {
     max-width: 360px;
     height: 100%;
-  }
-  .prev_btn,
-  .next {
-    display: none;
   }
 }
 @media (max-width: 370px) {

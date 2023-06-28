@@ -21,3 +21,7 @@ Template name: Meu Foot
 /*page-home objects*/
 @import url("./CSS/slide.css");
 @import url("./CSS/page-home.css");
+
+/*categories page*/
+@import url("./CSS/achive-product.css");
+@import url("./CSS/filter-mobile.css");

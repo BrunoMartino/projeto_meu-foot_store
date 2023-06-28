@@ -30,7 +30,7 @@ add_action('after_setup_theme', 'meufoot_custom_images');
 
 // controls product display on category pages
 function meufoot_chrono_loop_per_page() {
-  return 8;
+  return 8 ;
 }
 
 add_filter('loop_shop_per_page','meufoot_chrono_loop_per_page');

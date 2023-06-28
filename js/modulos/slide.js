@@ -201,7 +201,7 @@ export default class SlideNav extends Slide {
   addArrow(prev, next) {
     this.prevElement = document.querySelector(prev);
     this.nextElement = document.querySelector(next);
-    this.addArrowEvent();
+    if (prev && next) this.addArrowEvent();
   }
 
   addArrowEvent() {
