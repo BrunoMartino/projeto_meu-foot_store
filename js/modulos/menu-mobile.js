@@ -1,7 +1,11 @@
+import outsideClick from "./outsideclick.js";
+
 export default class MenuMobile {
-  constructor(menuButton, menuList, events) {
+  constructor(menuButton, menuList, links, submenu, events) {
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelectorAll(menuList);
+    this.links = Array.from(document.querySelectorAll(links));
+    this.submenu = document.querySelectorAll(submenu);
     this.html = document.querySelector("html");
 
     if (events === undefined) {
@@ -10,70 +14,52 @@ export default class MenuMobile {
       this.events = events;
     }
     this.openMenu = this.openMenu.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    this.activeSubmenu = this.activeSubmenu.bind(this);
   }
 
   openMenu(event) {
     if (event.type === "touchstart") event.preventDefault();
     this.menuList.forEach((element) => {
-      element.classList.toggle("ativo");
+      element.classList.add("ativo");
     });
-    this.menuButton.classList.toggle("ativo");
-
-    const links = Array.from(
-      document.querySelectorAll(".menu-categorias-container a")
-    );
-    const submenu = document.querySelectorAll(".sub-menu");
-    links.forEach((link) => {
-      link.addEventListener("click", activeSubMenu);
-    });
-    function activeSubMenu(event) {
-      event.preventDefault();
-      submenu.forEach((element) => {
-        element.classList.add("ativo");
+    this.menuButton.classList.add("ativo");
+    outsideClick(Array.from(this.menuList), this.events, () => {
+      this.menuList.forEach((element) => {
+        element.classList.remove("ativo");
       });
-      if (!this.eventRemoved) {
-        links.forEach((link) => {
-          link.removeEventListener("click", activeSubMenu);
-        });
-        this.eventRemoved = true;
-      }
-    }
-  }
-  handleOutsideClick(event) {
-    const buttonMenu = document.querySelector(".menu-mobile");
-    const listMenu = document.querySelector(".menu-categorias-container");
-    const loginMenu = document.querySelector(".menu-login");
-
-    const targetElements = [buttonMenu, listMenu, loginMenu];
-
-    handleOutsideClick(targetElements, event, () => {
-      setTimeout(() => {
-        this.menuList.forEach((element) => {
-          element.classList.remove("ativo");
-        });
-      });
+      this.menuButton.classList.remove("ativo");
     });
   }
   addMenuMobileEvents() {
     this.events.forEach((event) => {
       this.menuButton.addEventListener(event, this.openMenu);
-      this.html.addEventListener(event, this.handleOutsideClick);
+    });
+  }
+  addSubmenuEvents() {
+    this.links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.activeSubmenu(event);
+        console.log(event.target);
+      });
+    });
+  }
+
+  activeSubmenu(event) {
+    event.preventDefault();
+
+    this.submenu.forEach((element) => {
+      element.classList.add("ativo");
     });
   }
 
   init() {
     if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
+      console.log(this.submenu);
+      console.log(this.links);
+      this.addSubmenuEvents();
     }
     return this;
-  }
-}
-function handleOutsideClick(elementTargets, events, callback) {
-  const insideClick = elementTargets.some((elementTarget) => {
-    return elementTarget.contains(events.target);
-  });
-  if (!insideClick) {
-    callback();
   }
 }
