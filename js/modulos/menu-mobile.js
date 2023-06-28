@@ -37,27 +37,24 @@ export default class MenuMobile {
   }
   addSubmenuEvents() {
     this.links.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        this.activeSubmenu(event);
-        console.log(event.target);
-      });
+      link.addEventListener("click", this.activeSubmenu);
     });
   }
 
   activeSubmenu(event) {
     event.preventDefault();
-
     this.submenu.forEach((element) => {
       element.classList.add("ativo");
     });
+    setTimeout(() => {
+      console.log("removeu");
+      event.target.removeEventListener("click", this.activeSubmenu);
+    }, 1000);
   }
 
   init() {
     if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
-      console.log(this.submenu);
-      console.log(this.links);
       this.addSubmenuEvents();
     }
     return this;
