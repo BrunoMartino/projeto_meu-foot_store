@@ -1,6 +1,7 @@
 import MenuMobile from "./modulos/menu-mobile.js";
 import SlideNav from "./modulos/slide.js";
 import RegressiveTimer from "./modulos/regressive-timer.js";
+import Cat_Swachtes from "./modulos/category-swatches.js";
 
 const menuMobile = new MenuMobile(
   '[data-menu="button"]',
@@ -17,14 +18,25 @@ const filterMobile = new MenuMobile(
 );
 filterMobile.init();
 
-const slide = new SlideNav(".slide", ".slide-wrapper");
-if (slide) {
+const slideExist = document.querySelector('[data-home="slide"]');
+if (slideExist) {
+  const slide = new SlideNav(".slide", ".slide-wrapper");
   slide.init();
   slide.addArrow(".prev_btn", ".next_btn");
   slide.addControl();
 }
+const cronoExist = document.querySelector('[data-home="crono"]');
+if (cronoExist) {
+  const timer = new RegressiveTimer(
+    ".chrono-galeria .product-list .product-item"
+  );
+  timer.init();
+}
 
-const timer = new RegressiveTimer(
-  ".chrono-galeria .product-list .product-item"
+const swatches = new Cat_Swachtes(
+  '[data-cat="imgs"]',
+  '[data-cat="attributes"]',
+  ".variations select",
+  "#pa_imagem"
 );
-timer.init();
+swatches.init();

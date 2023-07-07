@@ -6,34 +6,36 @@
   <?php wc_print_notices(); ?>
 </div>
 
-<main>
+<main class="product-main">
 <?php
 if(have_posts()) { while(have_posts()) { the_post(); 
-  $produto = format_single_products(get_the_ID(), $image_size = "'gallery-main'"); 
+  $product_data = meufoot_format_single_product(get_the_ID(), $image_size = "'gallery-main'"); 
 ?>
   <div class="product-gallery" data-gallery="gallery">
     <div class="product-gallery__list">
-      <?php foreach($produto['gallery'] as $img) { ?>
-        <img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $produto['name']; ?>">
+      <?php foreach($product_data['gallery'] as $img) { ?>
+        <img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $product_data['name']; ?>">
         <?php } ?>
     </div>
     <div class="product-gallery__main">
-        <img data-gallery="gallery-main" src="<?= $produto['img']; ?>" alt="<?= $produto['name']; ?>">
+        <img data-gallery="gallery-main" src="<?= $product_data['img']; ?>" alt="<?= $product_data['name']; ?>">
     </div>
   </div>
   <section class="product-info">
-    <small><?= $produto['sku']; ?></small>
-    <h1><?= $produto['name']; ?></h1>
-    <p class="product-info__price" ><?= $produto['price']; ?></p>
-    <?php woocommerce_template_single_add_to_cart() ?>
+    <small><?= $product_data['sku']; ?></small>
+    <h1><?= $product_data['name']; ?></h1>
+    <p class="product-info__price" ><?= $product_data['price']; ?></p>
+    <?php meufoot_get_product_variation(get_the_ID()) ?>
+    <?php woocommerce_template_single_add_to_cart(); ?>
+     
     <h2>Descrição</h2>
-    <p><?= $produto['description']; ?></p>
+    <p><?= $product_data['description']; ?></p>
   </section>
 <?php } } ?>
 </main>
 
 <?php
-$related_ids = wc_get_related_products($produto['id'],3);
+$related_ids = wc_get_related_products($product_data['id'],3);
 $related_products = [];
 foreach($related_ids as $product_id) {
   $related_products[] = wc_get_product($product_id);
@@ -47,3 +49,7 @@ $related = format_products($related_products);
 </div>
 </section>
 <?php get_footer(); ?>
+
+<?php
+
+?>

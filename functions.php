@@ -1,28 +1,23 @@
 <?php
-$nova_senha = 'MeuFoot@0300'; //Digite a nova senha
-$user_id = 0; //Esse valor poderá mudar caso você tenha mais de um usuário cadastrado em seu site
-wp_set_password( $nova_senha, $user_id);
-
-// admin password - ^o&xseGJ*bCHSWJfb01$)%T^
-
 // Add Theme Style on website.
-function meufoot_add_woocommerce_support(){
-add_theme_support('woocommerce');
+function meufoot_add_woocommerce_support() {
+  add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'meufoot_add_woocommerce_support');
-add_action('wp_enqueue_scripts', 'meufoot_css');
 
 function meufoot_css() {
-  wp_register_style('meufoot-style', get_template_directory_uri() . '/style.css', array(), '1.0.0', false);
+  wp_register_style('meufoot-style', get_template_directory_uri() . '/style.css', [], '1.0.0', false);
   wp_enqueue_style('meufoot-style');
 }
-
+add_action('wp_enqueue_scripts', 'meufoot_css');
+ 
 // Add new images sizes and custom crops on uploaded imagens from WP Library
 
 function meufoot_custom_images() {
   add_image_size("category-box", 50, 50, ['center', 'top']);
   add_image_size("slide-image", 960, 360);
   add_image_size('product-box', 300, 300, ['center', 'top']);
+  add_image_size('prodcuct-gallery', 600, 560, ['center', 'top']);
   update_option("medium_crop", 1);
 }
 
@@ -94,8 +89,81 @@ function meufoot_product_list($products) { ?>
   </ul>
 <?php } ?>
 
+<?php
+function meufoot_format_single_product($id, $img_size = 'product-gallery') {
+  $product =(wc_get_product( $id ));
+
+  $gallery_ids = $product->get_gallery_attachment_ids();
+  $gallery = [];
+  if($gallery_ids) {
+    foreach ($gallery_ids as $img_id) {
+      $gallery[] = wp_get_attachment_image_src($img_id, $img_size)[0];
+    }
+  }
+  return [
+
+    'id' => $id,
+    'name'=>$product->get_name(),
+    'price'=>$product->get_price_html(),
+    'link'=>$product->get_permalink(),
+    'sku'=>$product->get_sku(),
+    'description'=> $product->get_description(),
+    'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
+    'gallery'=>$gallery
+  ];
+}
+?>
+
+<?php 
+
+function meufoot_get_product_variation($id, $image_size = 'medium') {
+  $product = wc_get_product($id);
+
+  if ($product->is_type('variable')) {
+      $variations = $product->get_available_variations();
+      $attributes_info = array();
+  
+    echo '<ul data-cat="imgs" class="cat-list__img">';
+  
+    foreach ($variations as $variation) {
+      $attributes = $variation['attributes'];
+  
+      foreach ($attributes as $attribute_name => $attribute_value) {
+        if (!empty($attribute_value)) {
+          if($attribute_name === 'attribute_pa_imagem') {
+            $variation_image = $variation['image'] ['url'];
+            echo '<li><div class="cat-box__img"><img src="' . $variation_image . '" alt=""></div></li>';
+          } else {
+            $attributes_info[$attribute_name][] = $attribute_value;
+          }
+        }
+      }
+    }
+    
+    echo '</ul>';
+  
+    if(!empty($attributes_info)) {
+      foreach($attributes_info as $attribute_name => $attribute_values) {
+        echo '<ul data-cat="attributes" class="cat-list__attr '. str_replace("attribute_", "", $attribute_name) . '">';
+        
+        sort($attribute_values);
+        $unique_values = array_unique($attribute_values);
+        foreach ($unique_values as $value) {
+          echo '<li class="cat-variation"><p>' . $value . '</p></li>';
+        }
+        echo '</ul>';
+        }
+      }
+    }
+  
+}
+
+
+?>
+
+
+
 
 <?php 
 require_once get_template_directory() . '/cmb2/load.php'
-
 ?>
