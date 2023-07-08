@@ -126,14 +126,59 @@
   border: 3px solid var(--cz-03);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-.qty {
-  display: none !important;
-}
+
 .btn-flexbox {
   display: flex;
-  align-items: center;
+  align-items: end;
+  justify-content: start;
   gap: 8px;
 }
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.qty {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+  width: 48px;
+  border: 2px solid var(--cz-03);
+}
+
+.quantity::before {
+  content: "";
+  justify-content: center;
+  display: inline-block;
+  color: var(--cz-12);
+  background-color: var(--cz-01);
+  background: url("../img-meufoot/icones/decrement-icon.svg") center center
+    no-repeat;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+.quantity::after {
+  content: "";
+  justify-content: center;
+  display: inline-block;
+  color: var(--cz-12);
+  background-color: var(--cz-01);
+  background: url("../img-meufoot/icones/increment-icon.svg") center center
+    no-repeat;
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
 .single_add_to_cart_button {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -157,9 +202,6 @@
   line-height: 2.25rem;
   margin-left: 32px;
 }
-.fret-p {
-  margin-bottom: 8px;
-}
 .fret-p,
 .card-p {
   display: flex;
@@ -167,6 +209,7 @@
   justify-content: start;
   font-weight: 600;
   color: var(--rs-05);
+  margin-bottom: 4px;
 }
 .fret-p::before {
   content: "";
