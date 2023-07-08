@@ -146,9 +146,9 @@
 /*controls footer end*/
 .footer__content--end {
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  padding-top: 48px;
-  margin-bottom: 24px;
+  padding: 24px 0;
   border-top: 4px solid var(--cz-04);
 }
 /*controls media query*/

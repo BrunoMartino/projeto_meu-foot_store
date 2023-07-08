@@ -1,0 +1,197 @@
+.woocommerce-notices-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.woocommerce-message {
+  border-top: 4px solid var(--rs-01);
+}
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+  margin-top: 24px;
+  align-items: center;
+}
+.woocommerce-message::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../img-meufoot/icones/heart-fill.svg") center center
+    no-repeat;
+}
+.product-main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 80px;
+}
+
+/*constrol images on gallery*/
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+}
+.product-gallery__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  order: 2;
+}
+
+[data-gallery="gallery-list"] {
+  width: 130px;
+  height: 100%;
+  border: 2px solid var(--cz-03);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.product-gallery__main {
+  max-width: 600px;
+  height: 100%;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 4px solid var(--rs-01);
+  border-radius: 8px;
+}
+.product-gallery__main img {
+  border-radius: 4px;
+}
+
+/*controls product info*/
+
+.product-info small {
+  padding: 4px 8px;
+  background: var(--az-01);
+  border-radius: 10px;
+}
+.product-info h1 {
+  margin: 24px 0 8px 0;
+}
+.product-info__price {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 24px;
+}
+.product-info__price-reg {
+  text-decoration-line: line-through;
+  color: var(--cz-07);
+}
+
+/*control cat select*/
+.variations {
+  display: none;
+}
+.cat-list__img,
+.cat-list__attr {
+  display: flex;
+  gap: 20px;
+}
+.cat-list__img {
+  max-width: 280px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.cat-box__img {
+  width: 56px;
+  height: 100%;
+  border: 3px solid var(--cz-05);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.cat-box__img:hover,
+.cat-variation:hover {
+  border: 3px solid var(--rs-01);
+}
+.cat-list__title {
+  color: var(--cz-07);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.cat-list__attr {
+  max-width: 280px;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.cat-variation {
+  padding: 6px;
+  background-color: var(--cz-01);
+  border: 3px solid var(--cz-03);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.qty {
+  display: none !important;
+}
+.btn-flexbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.single_add_to_cart_button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  border: none;
+  background: var(--rs-01);
+  color: var(--rs-05);
+  padding: 8px 24px 8px 24px;
+  border-radius: 4px;
+}
+.single_add_to_cart_button:after {
+  content: "+";
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-left: 32px;
+}
+.fret-p {
+  margin-bottom: 8px;
+}
+.fret-p,
+.card-p {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-weight: 600;
+  color: var(--rs-05);
+}
+.fret-p::before {
+  content: "";
+  display: blocks;
+  width: 32px;
+  height: 18px;
+  background: url("../img-meufoot/icones/shipping.svg") center center no-repeat;
+  margin-right: 8px;
+}
+.card-p::before {
+  content: "";
+  display: blocks;
+  width: 32px;
+  height: 18px;
+  background: url("../img-meufoot/icones/credit_card.svg") center center
+    no-repeat;
+  margin-right: 8px;
+}
+.product-description {
+  margin-bottom: 48px;
+}
+.product-related {
+  display: flex;
+  justify-content: start;
+  gap: 48px;
+  margin-top: 32px;
+  margin-bottom: 80px;
+}

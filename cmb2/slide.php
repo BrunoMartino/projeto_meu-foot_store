@@ -9,7 +9,7 @@ function cmb2_fields_slides() {
     'object_types' => ['page'],
     'show_on' => [
       'key' => 'page_template',
-      'value' => 'page-home.php'
+      'value' => 'page-home.php' 
     ],
   ]);
   $cmb->add_field([

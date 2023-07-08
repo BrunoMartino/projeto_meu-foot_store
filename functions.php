@@ -90,9 +90,8 @@ function meufoot_product_list($products) { ?>
 <?php } ?>
 
 <?php
-function meufoot_format_single_product($id, $img_size = 'product-gallery') {
+function meufoot_format_single_product($id, $img_size = 'medium') {
   $product =(wc_get_product( $id ));
-
   $gallery_ids = $product->get_gallery_attachment_ids();
   $gallery = [];
   if($gallery_ids) {
@@ -104,7 +103,8 @@ function meufoot_format_single_product($id, $img_size = 'product-gallery') {
 
     'id' => $id,
     'name'=>$product->get_name(),
-    'price'=>$product->get_price_html(),
+    'regular-price'=> $product->get_variation_regular_price('min', true),
+    'sell-price'=>$product->get_variation_sale_price('max', true),
     'link'=>$product->get_permalink(),
     'sku'=>$product->get_sku(),
     'description'=> $product->get_description(),
@@ -144,12 +144,12 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
   
     if(!empty($attributes_info)) {
       foreach($attributes_info as $attribute_name => $attribute_values) {
+        echo '<h3 class="cat-list__title font-1-up-s">' . str_replace("attribute_pa_", "", $attribute_name) . '</h3>';
         echo '<ul data-cat="attributes" class="cat-list__attr '. str_replace("attribute_", "", $attribute_name) . '">';
-        
         sort($attribute_values);
         $unique_values = array_unique($attribute_values);
         foreach ($unique_values as $value) {
-          echo '<li class="cat-variation"><p>' . $value . '</p></li>';
+          echo '<li class="cat-variation"><p class="font-1-s">' . $value . '</p></li>';
         }
         echo '</ul>';
         }

@@ -26,17 +26,5 @@ Template name: Meu Foot
 @import url("./CSS/achive-product.css");
 @import url("./CSS/filter-mobile.css");
 
-.product-main {
-  display: flex;
-}
-.cat-box__img {
-  width: 48px;
-  height: 100%;
-}
-.cat-list__img,
-.cat-list__attr {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  display: flex;
-  gap: 24px;
-}
+/*product page*/
+@import url("./CSS/single-product.css");
