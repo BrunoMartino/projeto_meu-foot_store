@@ -35,7 +35,7 @@
 .product-item.disabled:after {
   content: "";
   width: 100%;
-  height: 100%;
+  height: max-content;
   top: 0;
   z-index: 9999999;
   background: rgba(255, 255, 255, 0.4);
@@ -101,6 +101,7 @@
   background-color: var(--cz-01);
   padding: 16px;
   border-top: 1px solid var(--az-01);
+  border-bottom: 2px solid var(--cz-05);
 }
 @media (max-width: 960px) {
   .product-list {
@@ -116,5 +117,10 @@
   .product-item:before {
     width: max-content;
     opacity: 1;
+  }
+  @media (max-width: 320px) {
+    .product-item img {
+      max-width: 260px;
+    }
   }
 }

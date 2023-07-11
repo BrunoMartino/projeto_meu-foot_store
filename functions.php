@@ -132,7 +132,7 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
         if (!empty($attribute_value)) {
           if($attribute_name === 'attribute_pa_imagem') {
             $variation_image = $variation['image'] ['url'];
-            echo '<li><div class="cat-box__img"><img src="' . $variation_image . '" alt=""></div></li>';
+            echo '<li><div class="cat-box__img"><img data-cat="imgs-box" src="' . $variation_image . '" alt=""></div></li>';
           } else {
             $attributes_info[$attribute_name][] = $attribute_value;
           }
@@ -144,6 +144,7 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
   
     if(!empty($attributes_info)) {
       foreach($attributes_info as $attribute_name => $attribute_values) {
+        echo '<div>';
         echo '<h3 class="cat-list__title font-1-up-s">' . str_replace("attribute_pa_", "", $attribute_name) . '</h3>';
         echo '<ul data-cat="attributes" class="cat-list__attr '. str_replace("attribute_", "", $attribute_name) . '">';
         sort($attribute_values);
@@ -152,6 +153,7 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
           echo '<li class="cat-variation"><p class="font-1-s">' . $value . '</p></li>';
         }
         echo '</ul>';
+        echo '</div>';
         }
       }
     }

@@ -1,17 +1,9 @@
 export default class Cat_Swachtes {
-  constructor(imageUL, attrUL, variationSelect, imageID) {
-    this.imageUL = document.querySelector(imageUL);
-    this.imageID = document.querySelector(imageID);
+  constructor(attrUL, variationSelect) {
     this.attrUL = Array.from(document.querySelectorAll(attrUL));
     this.variationSelect = Array.from(
       document.querySelectorAll(variationSelect)
     );
-
-    //create images arrays for control
-    this.arrayImgUl = Array.from(this.imageUL.children);
-    this.arrayImgSelect = Array.from(this.imageID.children);
-    this.arrayImgSelect.shift();
-    this.arrayImgSelect.reverse();
   }
 
   createVariationsArray() {
@@ -35,6 +27,10 @@ export default class Cat_Swachtes {
   setVariationsSelected(attrArray, selectElement, variationArray) {
     attrArray.forEach((attr, index) => {
       attr.addEventListener("click", () => {
+        attrArray.forEach((el) => {
+          el.classList.remove("ativo");
+        });
+        attr.classList.add("ativo");
         if (!this.isChangeEventInProgress) {
           this.isChangeEventInProgress = true;
 
@@ -52,21 +48,6 @@ export default class Cat_Swachtes {
       });
     });
   }
-
-  SetImgSelected() {
-    this.arrayImgUl.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        this.arrayImgSelect.forEach((option) => {
-          option.removeAttribute("selected");
-        });
-        this.arrayImgSelect[index].setAttribute("selected", "selected");
-        this.imageID.value = this.arrayImgSelect[index].value;
-
-        this.updateForm();
-      });
-    });
-  }
-
   // this two functions updates the default form created by the woocommerce.
   updateForm() {
     const changeEvent = new Event("change", { bubbles: true });
@@ -91,6 +72,5 @@ export default class Cat_Swachtes {
 
   init() {
     this.createVariationsArray();
-    this.SetImgSelected();
   }
 }

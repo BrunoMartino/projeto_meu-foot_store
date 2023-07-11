@@ -1,7 +1,9 @@
 .chrono-galeria,
 .newest-galeria,
 .most_sales-galeria {
-  margin-bottom: 60px;
+  margin-bottom: 24px;
+  padding: 36px 0;
+  overflow-y: hidden;
 }
 .chrono-galeria .product-list {
   flex-wrap: nowrap;
@@ -37,6 +39,7 @@
   background: var(--rs-03);
   margin-right: 12px;
 }
+
 @media (max-width: 960px) {
   .chrono-galeria .product-list {
     flex-wrap: wrap;

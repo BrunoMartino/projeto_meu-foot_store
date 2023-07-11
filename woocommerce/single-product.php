@@ -28,7 +28,10 @@ if(have_posts()) { while(have_posts()) { the_post();
       <p class="product-info__price-reg font-1-s">R$ <?= $product_data['regular-price']; ?></p>
       <p class="product-info__price-sell font-1-l">R$ <?= $product_data['sell-price']; ?></p>
     </div>
+    <div class='product-info__variations'>
     <?php meufoot_get_product_variation(get_the_ID()) ?>
+    </div>
+    
     <div class='btn-flexbox'>
     <?php woocommerce_template_single_add_to_cart(); ?>
     <div>
@@ -53,9 +56,9 @@ foreach($related_ids as $product_id) {
 $related = format_products($related_products);
 ?>
 <section class="container">
-<h2 class="font-1-up-l product-related__title">As Pessoas também procuram:</h2>
-<div class="product-related">
 
+<div class="product-related">
+<h2 class="font-1-up-l product-related__title">As Pessoas também procuram:</h2>
   <?php meufoot_product_list($related); ?>
 </div>
 </section>

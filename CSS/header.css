@@ -117,7 +117,7 @@
   width: 20px;
   height: 20px;
 }
-/*control cart and whishlist button*/
+/*control cart button*/
 .header__main--mini-menu {
   display: flex;
   justify-content: right;
