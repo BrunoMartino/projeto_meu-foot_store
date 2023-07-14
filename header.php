@@ -46,7 +46,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
     </div>
     <nav class="header__main--mini-menu">
      <div class=mini-menu-item>
-       <a class="carrinho" href="carrinho/"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="">
+       <a class="carrinho" href="/carrinho"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="">
         <?php if($cart_count) { ?>
        <span class="carrinho_cont"><?= $cart_count; ?></span>
        <?php } ?>

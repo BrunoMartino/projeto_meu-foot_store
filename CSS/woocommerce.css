@@ -1,0 +1,184 @@
+.woocommerce-notices-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.woocommerce-message {
+  border-top: 4px solid var(--rs-01);
+}
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+  margin-top: 24px;
+  align-items: center;
+}
+.woocommerce-message::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../img-meufoot/icones/heart-fill.svg") center center
+    no-repeat;
+}
+
+.shop_table {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+}
+td.product-quantity .quantity {
+  margin-left: 24px;
+}
+.actions button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.25rem !important;
+  background-color: var(--cz-08) !important;
+  color: var(--cz-02) !important;
+}
+
+.coupon {
+  display: flex !important;
+  align-items: center;
+}
+.coupon .input-text {
+  width: 200px !important;
+  margin-right: 16px !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.coupon button {
+  max-width: 25ch;
+  background: var(--az-01) !important;
+  color: var(--az-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.25rem !important;
+}
+
+.cart_totals h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.checkout-button {
+  background: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+a.shipping-calculator-button,
+.woocommerce-shipping-destination strong {
+  color: var(--az-03) !important;
+}
+a.shipping-calculator-button::before {
+  display: inline-block;
+  content: "";
+  background: url("../img-meufoot/icones/diagonal-arrow.svg") center center
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+a.shipping-calculator-button::after {
+  display: none !important;
+}
+.woocommerce-shipping-calculator button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.25rem !important;
+}
+
+.woocommerce form .form-row input.input-text {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 8px 12px;
+  color: var(--cz-09);
+  border: 1px solid var(--az-01);
+  border-radius: 4px;
+}
+.woocommerce form .form-row input.input-text::focus {
+  border: 1px solid var(--rs-01);
+}
+.woocommerce .checkout label {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.woocommerce .checkout h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.woocommerce-terms-and-conditions-wrapper {
+  display: none !important;
+}
+#place_order {
+  background: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .product-thumbnail {
+    display: block !important;
+    float: right;
+  }
+  .product-thumbnail::before {
+    display: none;
+  }
+  td.product-quantity .quantity {
+    margin-left: 16px !important;
+  }
+}

@@ -42,9 +42,13 @@ if(have_posts()) { while(have_posts()) { the_post();
   </section>
 <?php } } ?>
 </main>
-<section class='container product-description'>
-<h2 class="font-1-up-s">Descrição</h2>
-    <p><?= $product_data['description']; ?></p>
+<section class='container'>
+  <div class='product-description'>
+  <h2 class="font-1-up-s">Descrição</h2>
+  <p><?= $product_data['description']; ?></p>
+
+  </div>
+
 </section>
 
 <?php

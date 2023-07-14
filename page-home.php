@@ -28,7 +28,7 @@ $data['most_sales'] = format_products($products_most_sales, 'product-box');
 
 <?php 
 if(have_posts()){while(have_posts()){the_post();?>
-<section class="container slide-galeria" data-home="slide">
+<section class="container-slide slide-galeria" data-home="slide">
    <button class="prev_btn"></button>
     <?php cmb2_slide_file_list('add_slide_home','add_slide_home_url',$image_size = "slide-image") ?>
    <button class="next_btn"></button>

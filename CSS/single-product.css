@@ -1,31 +1,3 @@
-.woocommerce-notices-wrapper {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.woocommerce-message {
-  border-top: 4px solid var(--rs-01);
-}
-.woocommerce-error,
-.woocommerce-info,
-.woocommerce-message {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-align: left;
-  margin-top: 24px;
-  align-items: center;
-}
-.woocommerce-message::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url("../img-meufoot/icones/heart-fill.svg") center center
-    no-repeat;
-}
 .product-main {
   display: flex;
   justify-content: space-evenly;
@@ -179,7 +151,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-.single_add_to_cart_button {
+.woocommerce-variation-add-to-cart button.single_add_to_cart_button {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;

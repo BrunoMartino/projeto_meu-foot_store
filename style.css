@@ -28,3 +28,6 @@ Template name: Meu Foot
 
 /*product page*/
 @import url("./CSS/single-product.css");
+/*reset woocommerce styles*/
+
+@import url("./CSS/woocommerce.css");

@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'meufoot_css');
 
 function meufoot_custom_images() {
   add_image_size("category-box", 50, 50, ['center', 'top']);
-  add_image_size("slide-image", 960, 360);
+  add_image_size("slide-image", 1280, 560);
   add_image_size('product-box', 300, 300, ['center', 'top']);
   add_image_size('prodcuct-gallery', 600, 560, ['center', 'top']);
   update_option("medium_crop", 1);
@@ -159,11 +159,17 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
     }
   
 }
-
-
 ?>
 
+<?php 
+function custom_product_title( $product_title, $cart_item, $cart_item_key ) {
+  $product = $cart_item['data'];
+  $product_title = $product->get_title();
 
+  return $product_title;
+}
+add_filter( 'woocommerce_cart_item_name', 'custom_product_title', 10, 3 );
+?>
 
 
 <?php 

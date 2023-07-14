@@ -22,7 +22,6 @@
       <h3 class="font-1-up-l rs-02">Páginas úteis:</h3>
         <ul>
          <li><a class="font-1-s rs-04" href="#">LGPD</a></li>
-          <li><a class="font-1-s rs-04" href="#">Fale Conosco</a></li>
           <li><a class="font-1-s rs-04" href="#">Prazos de Entrega</a></li>
           <li><a class="font-1-s rs-04" href="#">Termos e Condições Gerais</a></li>
           <li><a class="font-1-s rs-04" href="#">Termos de Reembolso e Retorno</a></li>
