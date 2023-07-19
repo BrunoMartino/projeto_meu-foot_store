@@ -13,6 +13,7 @@ const menuMobile = new MenuMobile(
   "#menu-categorias .sub-menu"
 );
 menuMobile.init();
+
 const filterMobile = new MenuMobile(
   ".filter-mobile",
   ".filters",

@@ -171,6 +171,65 @@ function custom_product_title( $product_title, $cart_item, $cart_item_key ) {
 add_filter( 'woocommerce_cart_item_name', 'custom_product_title', 10, 3 );
 ?>
 
+<?php 
+
+function meufoot_custom_user_menu($menu_links) {
+  unset($menu_links['downloads']);
+  unset($menu_links['dashboard']);
+  $menu_links['customer-logout'] = 'Sair';
+  $menu_links['edit-account'] = 'Meus Dados';
+  $menu_links['edit-address'] = 'Endereços';
+  $menu_links['orders'] = 'Meus Pedidos';
+  
+  return $menu_links;
+}
+
+add_filter('woocommerce_account_menu_items', 'meufoot_custom_user_menu');
+
+function alterar_rotulos_woocommerce( $translated_text, $text, $domain ) {
+  switch ( $translated_text ) {
+      case 'First Name':
+          $translated_text = 'Primeiro Nome';
+          break;
+      case 'Last Name':
+          $translated_text = 'Último Nome';
+          break;
+      // Adicione outros rótulos que deseja alterar aqui
+      
+  }
+  return $translated_text;
+}
+add_filter( 'gettext', 'alterar_rotulos_woocommerce', 20, 3 );
+
+function custom_order_item_details($item_name, $item, $is_visible) {
+  $product = wc_get_product($item->get_product_id());
+
+  if ($product) {
+      $thumbnail = '';
+      $variation_id = $item->get_variation_id(); // Obtém o ID da variação
+
+      if ($variation_id) {
+          $variation = wc_get_product($variation_id);
+
+          if ($variation && $variation->get_image_id()) {
+              $thumbnail = wp_get_attachment_image($variation->get_image_id(), 'thumbnail');
+          }
+      } elseif ($product->get_image_id()) {
+          $thumbnail = wp_get_attachment_image($product->get_image_id(), 'thumbnail');
+      }
+
+      $item_name = $thumbnail . ' ' . $product->get_name();
+  }
+
+  return $item_name;
+}
+
+add_filter('woocommerce_order_item_name', 'custom_order_item_details', 10, 3);
+add_filter('woocommerce_order_item_thumbnail', 'custom_order_item_details', 10, 3);
+
+?>
+
+
 
 <?php 
 require_once get_template_directory() . '/cmb2/load.php'

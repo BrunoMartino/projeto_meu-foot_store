@@ -1,3 +1,5 @@
+/* notices styles*/
+
 .woocommerce-notices-wrapper {
   align-items: center;
   justify-content: space-between;
@@ -26,7 +28,7 @@
   background: url("../img-meufoot/icones/heart-fill.svg") center center
     no-repeat;
 }
-
+/*cart table styles*/
 .shop_table {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -91,9 +93,9 @@ td.product-quantity .quantity {
   color: var(--rs-05) !important;
   font-family: "Nunito Sans";
   font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.5rem !important;
   letter-spacing: 0.02rem;
   text-transform: uppercase;
 }
@@ -120,8 +122,10 @@ a.shipping-calculator-button::after {
   font-size: 0.85rem !important;
   line-height: 1.25rem !important;
 }
+/* billing page styles */
 
-.woocommerce form .form-row input.input-text {
+.woocommerce form .form-row input.input-text,
+.registration-form input {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -132,10 +136,10 @@ a.shipping-calculator-button::after {
   border: 1px solid var(--az-01);
   border-radius: 4px;
 }
-.woocommerce form .form-row input.input-text::focus {
-  border: 1px solid var(--rs-01);
-}
-.woocommerce .checkout label {
+
+.woocommerce .checkout label,
+.woocommerce-form label,
+.registration-form label {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -144,7 +148,8 @@ a.shipping-calculator-button::after {
   text-transform: uppercase;
   letter-spacing: 0.02rem;
 }
-.woocommerce .checkout h3 {
+.woocommerce .checkout h3,
+.u-columns h2 {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -155,7 +160,9 @@ a.shipping-calculator-button::after {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-.woocommerce-terms-and-conditions-wrapper {
+.woocommerce-terms-and-conditions-wrapper,
+.woocommerce-privacy-policy-text,
+.woocommerce-simple-registration-login-link {
   display: none !important;
 }
 #place_order {
@@ -169,7 +176,278 @@ a.shipping-calculator-button::after {
   letter-spacing: 0.02rem;
   text-transform: uppercase;
 }
+/* login and sign in style*/
+.woocommerce-LostPassword {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+.woocommerce-LostPassword a {
+  color: var(--az-02);
+}
+.woocommerce-form-login__rememberme {
+  display: flex !important;
+  margin-bottom: 24px;
+}
+.woocommerce-form-login__submit,
+.woocommerce-form-register__submit,
+.registration-form .button {
+  background-color: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+.registration-form {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*custom user menu styles*/
+/*custom user menu buttons*/
+.woocommerce-account.logged-in .woocommerce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.woocommerce-account.logged-in .index-title {
+  margin-bottom: 0px;
+}
+.woocommerce-MyAccount-navigation {
+  width: 100% !important;
+}
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 64px auto;
+}
+.woocommerce-MyAccount-navigation ul li {
+  background: #b5e7fc;
+  flex-wrap: nowrap;
 
+  text-align: center;
+  max-width: max-content;
+  border-radius: 16px;
+}
+.woocommerce-MyAccount-navigation ul li:last-child {
+  background: #ffc8c8;
+}
+.woocommerce-MyAccount-navigation ul li:last-child:hover {
+  background: #f79f9f;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  padding: 12px 24px;
+}
+/*custom user menu orders table*/
+.woocommerce-MyAccount-orders th,
+.woocommerce-MyAccount-orders td {
+  text-align: center;
+}
+.woocommerce-orders-table__cell-order-total {
+  display: flex !important;
+  flex-direction: column;
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button {
+  margin: 0 8px !important;
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button.pay {
+  color: var(--rs-05);
+  background: var(--rs-01);
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button.cancel {
+  opacity: 0.6;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active,
+.woocommerce table.my_account_orders .button:hover,
+.woocommerce-MyAccount-navigation ul li:hover {
+  background: linear-gradient(#85cbea, #73bcdc);
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.woocommerce-account.logged-in .woocommerce::before,
+.woocommerce-account.logged-in .woocommerce::after,
+.woocommerce-MyAccount-navigation-link--edit-address li {
+  display: none;
+}
+/*custom user menu order detail*/
+.woocommerce-account .woocommerce-MyAccount-content,
+.woocommerce-order-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  float: none;
+}
+.woocommerce-MyAccount-content p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--cz-09);
+  margin-bottom: 16px;
+}
+.woocommerce-MyAccount-content h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.woocommerce-MyAccount-content .order-number,
+.woocommerce-MyAccount-content .order-date,
+.woocommerce-MyAccount-content .order-status {
+  font-size: 1rem;
+}
+.woocommerce-MyAccount-content .order-date {
+  background-color: var(--cz-02);
+  color: var(--cz-11);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.woocommerce-MyAccount-content .order-number {
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.woocommerce-MyAccount-content .order-status {
+  background-color: var(--cz-02);
+  color: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.order_details {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+  max-width: 100%;
+  margin-bottom: 120px !important;
+}
+
+table.order_details tbody td,
+.wc-item-meta li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wc-item-meta li {
+  gap: 4px;
+}
+.wc-item-meta li p {
+  font-size: 1.125rem;
+  margin-left: 0;
+}
+.wc-item-meta li strong {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.product-quantity {
+  font-size: 1rem;
+}
+.product-name img {
+  max-width: 50px;
+}
+td.product-total {
+  display: none !important;
+}
+.wc-item-meta li:first-child,
+.woocommerce-column--billing-address,
+table.order_details thead {
+  display: none;
+}
+table.order_details tfoot th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+/*custom user menu track code*/
+.wc-correios-tracking__table {
+  position: relative;
+}
+.woocommerce-order-details::after {
+  content: "ATENÇÃO: Nossa sessão de rastreio é atualizada automáticamente com chave fornecida pelo Correios do Brasil. Caso seu produto não esteja atualizando, por favor, clique no botão acima e use a página de rastreio dos Correios do Brasil";
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  margin-top: 8px;
+  margin-bottom: 120px;
+}
+.wc-correios-tracking__description {
+  max-width: 90ch !important;
+  margin-bottom: 24px !important;
+}
+
+.wc-correios-tracking__description strong {
+  font-size: 1.125rem;
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.wc-correios-tracking__table thead tr th:nth-child(2),
+.wc-correios-tracking__table tbody tr td:nth-child(2) {
+  display: none;
+}
+input.wc-correios-tracking__button.button {
+  background-color: #d0ffa1;
+  color: #0a1201;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+input.wc-correios-tracking__button.button:hover {
+  background-color: #a3de67;
+  color: #0a1201;
+}
+
+/*custom user menu destination address*/
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
+  float: none;
+}
+/* mobile changes in style*/
+@media (max-width: 960px) {
+  .woocommerce-MyAccount-content {
+    padding: 0 36px;
+  }
+}
 @media (max-width: 760px) {
   .product-thumbnail {
     display: block !important;
@@ -178,7 +456,56 @@ a.shipping-calculator-button::after {
   .product-thumbnail::before {
     display: none;
   }
+  .woocommerce-MyAccount-content {
+    padding: 0 36px;
+  }
   td.product-quantity .quantity {
     margin-left: 16px !important;
+  }
+  .u-columns {
+    margin: 0 16px;
+  }
+  .wc-correios-tracking__table tfoot tr td::before {
+    display: none;
+  }
+  .wc-correios-tracking__table tfoot tr td {
+    text-align: left !important;
+  }
+  .wc-correios-tracking__table tbody tr td:first-child::before {
+    content: "Última Atualização:";
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+  }
+  .wc-correios-tracking__table tbody tr td:last-child::before {
+    content: "Status da Encomenda:";
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+  }
+
+  @media (max-width: 600px) {
+    .woocommerce-MyAccount-navigation ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      gap: 16px;
+    }
+    .order_details {
+      flex-direction: column;
+      max-width: max-content;
+    }
+    .woocommerce-MyAccount-content p {
+      max-width: 45ch;
+      line-height: 2rem;
+    }
   }
 }
