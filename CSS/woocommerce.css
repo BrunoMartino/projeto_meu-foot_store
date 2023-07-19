@@ -176,7 +176,12 @@ a.shipping-calculator-button::after {
   letter-spacing: 0.02rem;
   text-transform: uppercase;
 }
+
 /* login and sign in style*/
+#customer_login {
+  display: flex;
+  justify-content: space-between;
+}
 .woocommerce-LostPassword {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -442,6 +447,75 @@ input.wc-correios-tracking__button.button:hover {
 .woocommerce-page .col2-set .col-2 {
   float: none;
 }
+
+/*custom user menu users saved address*/
+.addresses {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.addresses h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  margin-bottom: 16px;
+}
+.addresses address {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  border: 2px solid var(--cz-04);
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.addresses .edit {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  background-color: var(--az-01);
+  color: var(--az-05);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+.woocommerce-address-fields p .button {
+  margin: 24px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+}
+/*custom user menu Edit Account User-data*/
+.woocommerce-EditAccountForm fieldset {
+  margin-top: 64px;
+}
+.woocommerce-EditAccountForm p .button {
+  margin: 24px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+}
 /* mobile changes in style*/
 @media (max-width: 960px) {
   .woocommerce-MyAccount-content {
@@ -449,6 +523,10 @@ input.wc-correios-tracking__button.button:hover {
   }
 }
 @media (max-width: 760px) {
+  #customer_login {
+    flex-direction: column;
+    padding: 0 24px;
+  }
   .product-thumbnail {
     display: block !important;
     float: right;
@@ -461,9 +539,6 @@ input.wc-correios-tracking__button.button:hover {
   }
   td.product-quantity .quantity {
     margin-left: 16px !important;
-  }
-  .u-columns {
-    margin: 0 16px;
   }
   .wc-correios-tracking__table tfoot tr td::before {
     display: none;
@@ -490,6 +565,10 @@ input.wc-correios-tracking__button.button:hover {
     line-height: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.02rem;
+  }
+  .addresses {
+    flex-direction: column;
+    padding: 0 24px;
   }
 
   @media (max-width: 600px) {
