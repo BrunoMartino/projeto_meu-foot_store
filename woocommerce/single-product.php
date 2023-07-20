@@ -14,11 +14,11 @@ if(have_posts()) { while(have_posts()) { the_post();
   <div class="product-gallery" data-gallery="gallery">
     <div class="product-gallery__list">
       <?php foreach($product_data['gallery'] as $img) { ?>
-        <img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $product_data['name']; ?>">
+        <img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $product_data['name']; ?>" loading='lazy'>
         <?php } ?>
     </div>
     <div class="product-gallery__main">
-        <img data-gallery="gallery-main" src="<?= $product_data['img']; ?>" alt="<?= $product_data['name']; ?>">
+        <img data-gallery="gallery-main" src="<?= $product_data['img']; ?>" alt="<?= $product_data['name']; ?>" loading='lazy'>
     </div>
   </div>
   <section class="product-info">

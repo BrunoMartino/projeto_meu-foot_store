@@ -32,7 +32,7 @@ export default class MenuMobile {
   }
   addMenuMobileEvents() {
     this.events.forEach((event) => {
-      this.menuButton.addEventListener(event, this.openMenu);
+      this.menuButton.addEventListener(event, this.openMenu, { passive: true });
     });
   }
   addSubmenuEvents() {
@@ -55,7 +55,6 @@ export default class MenuMobile {
     currentSubMenu.classList.add("ativo");
 
     setTimeout(() => {
-      console.log("removeu");
       event.target.removeEventListener("click", this.activeSubmenu);
     }, 150);
   }

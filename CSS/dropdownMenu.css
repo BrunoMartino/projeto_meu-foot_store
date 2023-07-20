@@ -11,8 +11,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: url("../img-meufoot/icones/heart-fill.svg") center center
-    no-repeat;
+  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
   position: absolute;
   z-index: 300;
   top: -10px;

@@ -1,0 +1,31 @@
+.woocommerce-MyAccount-orders th,
+.woocommerce-MyAccount-orders td {
+  text-align: center;
+}
+.woocommerce-orders-table__cell-order-total {
+  display: flex !important;
+  flex-direction: column;
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button {
+  margin: 0 8px !important;
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button.pay {
+  color: var(--rs-05);
+  background: var(--rs-01);
+}
+.woocommerce-orders-table__cell-order-actions .woocommerce-button.cancel {
+  opacity: 0.6;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active,
+.woocommerce table.my_account_orders .button:hover,
+.woocommerce-MyAccount-navigation ul li:hover {
+  background: linear-gradient(#85cbea, #73bcdc);
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.woocommerce-account.logged-in .woocommerce::before,
+.woocommerce-account.logged-in .woocommerce::after,
+.woocommerce-MyAccount-navigation-link--edit-address li {
+  display: none;
+}

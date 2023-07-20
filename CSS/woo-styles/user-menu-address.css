@@ -1,0 +1,51 @@
+.addresses {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.addresses h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  margin-bottom: 16px;
+}
+.addresses address {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  border: 2px solid var(--cz-04);
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.addresses .edit {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  background-color: var(--az-01);
+  color: var(--az-05);
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+.woocommerce-address-fields p .button {
+  margin: 24px 0;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+}

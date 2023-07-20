@@ -1,0 +1,93 @@
+.shop_table {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+}
+td.product-quantity .quantity {
+  margin-left: 24px;
+}
+.actions button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.25rem !important;
+  background-color: var(--cz-08) !important;
+  color: var(--cz-02) !important;
+}
+
+.coupon {
+  display: flex !important;
+  align-items: center;
+}
+.coupon .input-text {
+  width: 200px !important;
+  margin-right: 16px !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.coupon button {
+  max-width: 25ch;
+  background: var(--az-01) !important;
+  color: var(--az-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.25rem !important;
+}
+
+.cart_totals h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.checkout-button {
+  background: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.5rem !important;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+a.shipping-calculator-button,
+.woocommerce-shipping-destination strong {
+  color: var(--az-03) !important;
+}
+a.shipping-calculator-button::before {
+  display: inline-block;
+  content: "";
+  background: url("./img-meufoot/icones/diagonal-arrow.svg") center center
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+a.shipping-calculator-button::after {
+  display: none !important;
+}
+.woocommerce-shipping-calculator button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.25rem !important;
+}

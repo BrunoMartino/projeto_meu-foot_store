@@ -30,7 +30,7 @@
   .filter-mobile:after {
     content: "";
     display: inline-block;
-    background: url("../img-meufoot/icones/filter-icon-2.svg") center center
+    background: url("./img-meufoot/icones/filter-icon-2.svg") center center
       no-repeat;
     width: 28px;
     height: 28px;

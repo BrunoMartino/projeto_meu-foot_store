@@ -1,0 +1,37 @@
+#customer_login {
+  display: flex;
+  justify-content: space-between;
+}
+.woocommerce-LostPassword {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+.woocommerce-LostPassword a {
+  color: var(--az-02);
+}
+.woocommerce-form-login__rememberme {
+  display: flex !important;
+  margin-bottom: 24px;
+}
+.woocommerce-form-login__submit,
+.woocommerce-form-register__submit,
+.registration-form .button {
+  background-color: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+.registration-form {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -36,7 +36,7 @@
 .filters h1::after {
   content: "";
   display: block;
-  background: url("../img-meufoot/icones/filter-icon.svg") center center
+  background: url("./img-meufoot/icones/filter-icon.svg") center center
     no-repeat;
   width: 42px;
   height: 42px;

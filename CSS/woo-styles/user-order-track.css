@@ -1,0 +1,45 @@
+.wc-correios-tracking__table {
+  position: relative;
+}
+.woocommerce-order-details::after {
+  content: "ATENÇÃO: Nossa sessão de rastreio é atualizada automáticamente com chave fornecida pelo Correios do Brasil. Caso seu produto não esteja atualizando, por favor, clique no botão acima e use a página de rastreio dos Correios do Brasil";
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  margin-top: 8px;
+  margin-bottom: 120px;
+}
+.wc-correios-tracking__description {
+  max-width: 90ch !important;
+  margin-bottom: 24px !important;
+}
+
+.wc-correios-tracking__description strong {
+  font-size: 1.125rem;
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.wc-correios-tracking__table thead tr th:nth-child(2),
+.wc-correios-tracking__table tbody tr td:nth-child(2) {
+  display: none;
+}
+input.wc-correios-tracking__button.button {
+  background-color: #d0ffa1;
+  color: #0a1201;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+input.wc-correios-tracking__button.button:hover {
+  background-color: #a3de67;
+  color: #0a1201;
+}

@@ -1,0 +1,37 @@
+/*
+Template name: Meu Foot
+*/
+
+/*global archives*/
+@import "./CSS/global.css";
+@import "./CSS/componentes.css";
+@import "./CSS/tipografia.css";
+@import "./CSS/cores.css";
+
+/*header*/
+@import "./CSS/header.css";
+
+/*footer*/
+@import url("./CSS/footer.css");
+
+/*dropdown and mobile Menu on header*/
+@import "./CSS/dropdownMenu.css";
+@import url("./CSS/menu-mobile.css");
+
+/*page-home objects*/
+@import url("./CSS/slide.css");
+@import url("./CSS/page-home.css");
+
+/*categories page*/
+@import url("./CSS/achive-product.css");
+@import url("./CSS/filter-mobile.css");
+
+/*product page*/
+@import url("./CSS/single-product.css");
+
+/*reset woocommerce styles*/
+
+@import url("./CSS/woocommerce.css");
+
+/*intern-pages*/
+@import url("./CSS/intern-pages.css");

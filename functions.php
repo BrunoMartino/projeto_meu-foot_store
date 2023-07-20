@@ -71,7 +71,7 @@ function meufoot_product_list($products) { ?>
   <li class="product-item">
     <a href="<?= $product['link']; ?>">
     <div class='product-img'>
-      <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
+      <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>" loading='lazy' width="300" height="300">
     </div>
     <h2 class='font-2-up-m'><?= $product['name']; ?></h2>
     <div class='product-item__info'>
@@ -132,7 +132,7 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
         if (!empty($attribute_value)) {
           if($attribute_name === 'attribute_pa_imagem') {
             $variation_image = $variation['image'] ['url'];
-            echo '<li><div class="cat-box__img"><img data-cat="imgs-box" src="' . $variation_image . '" alt=""></div></li>';
+            echo '<li><div class="cat-box__img"><img data-cat="imgs-box" src="' . $variation_image . '" alt="" loading="lazy"></div></li>';
           } else {
             $attributes_info[$attribute_name][] = $attribute_value;
           }
@@ -226,6 +226,31 @@ function custom_order_item_details($item_name, $item, $is_visible) {
 
 add_filter('woocommerce_order_item_name', 'custom_order_item_details', 10, 3);
 add_filter('woocommerce_order_item_thumbnail', 'custom_order_item_details', 10, 3);
+
+function add_async_defer_lazy_to_plugin_assets($tag, $handle, $src) {
+  // Verificar se o recurso é carregado por um plugin ou pelo diretório wp-includes
+  if (strpos($src, '/wp-content/plugins/') !== false || strpos($src, '/wp-includes/') !== false) {
+      // Verificar se o recurso é um script
+      if (wp_script_is($handle, 'registered')) {
+          $tag = str_replace('<script', '<script async', $tag);
+          $tag = str_replace('></script>', ' loading="lazy"></script>', $tag);
+      }
+      
+      // Verificar se o recurso é um estilo
+      if (wp_style_is($handle, 'registered')) {
+          $tag = str_replace('<link', '<link rel="stylesheet" async', $tag);
+      }
+  }
+  
+  return $tag;
+}
+
+add_filter('script_loader_tag', 'add_async_defer_lazy_to_plugin_assets', 10, 3);
+add_filter('style_loader_tag', 'add_async_defer_lazy_to_plugin_assets', 10, 3);
+
+
+
+
 
 ?>
 

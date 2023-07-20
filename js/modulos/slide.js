@@ -83,9 +83,11 @@ export class Slide {
 
   addSlideEvents() {
     this.wrapper.addEventListener("mousedown", this.onStart);
-    this.wrapper.addEventListener("touchstart", this.onStart);
+    this.wrapper.addEventListener("touchstart", this.onStart, {
+      passive: true,
+    });
     this.wrapper.addEventListener("mouseup", this.onEnd);
-    this.wrapper.addEventListener("touchend", this.onEnd);
+    this.wrapper.addEventListener("touchend", this.onEnd, { passive: true });
   }
 
   // init slides navigation

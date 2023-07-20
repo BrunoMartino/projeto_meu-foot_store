@@ -131,7 +131,7 @@
   justify-content: center;
   display: block;
   background-color: var(--cz-01);
-  background: url("../img-meufoot/icones/decrement-icon.svg") center center
+  background: url("./img-meufoot/icones/decrement-icon.svg") center center
     no-repeat;
   width: 28px;
   height: 28px;
@@ -141,7 +141,7 @@
   justify-content: center;
   display: block;
   background-color: var(--cz-01);
-  background: url("../img-meufoot/icones/increment-icon.svg") center center
+  background: url("./img-meufoot/icones/increment-icon.svg") center center
     no-repeat;
   width: 28px;
   height: 28px;
@@ -179,7 +179,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: blocks;
   width: 32px;
   height: 18px;
-  background: url("../img-meufoot/icones/shipping.svg") center center no-repeat;
+  background: url("./img-meufoot/icones/shipping.svg") center center no-repeat;
   margin-right: 8px;
 }
 .card-p::before {
@@ -187,7 +187,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: blocks;
   width: 32px;
   height: 18px;
-  background: url("../img-meufoot/icones/credit_card.svg") center center
+  background: url("./img-meufoot/icones/credit_card.svg") center center
     no-repeat;
   margin-right: 8px;
 }

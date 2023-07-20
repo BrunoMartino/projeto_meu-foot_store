@@ -27,7 +27,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
 <button data-menu='button' class='menu-mobile' aria-expanded="false" aria-controls="mobile menu-categorias">Menu</button>
 <div class="header__main"> 
   <div class="header__main--logo">
-    <a href="/"><img src="<?= $img_url . '/logo.png' ?>" alt="Meu Foot"></a>
+    <a href="/"><img src="<?= $img_url . '/logo.webp' ?>" alt="Meu Foot" width="255" height="160"></a>
   </div>
   <div class="header__main--user-menu"> 
     <nav class="menu-login" >
@@ -46,7 +46,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
     </div>
     <nav class="header__main--mini-menu">
      <div class=mini-menu-item>
-       <a class="carrinho" href="/carrinho"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="">
+       <a class="carrinho" href="/carrinho"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="carrinho"  width="40" height="40">
         <?php if($cart_count) { ?>
        <span class="carrinho_cont"><?= $cart_count; ?></span>
        <?php } ?>
@@ -77,12 +77,12 @@ $cart_count = WC()->cart->get_cart_contents_count();
 </div>
   <div class="header__main--vantagens">
   <div class=" header__main--vantagens-item">
-  <img src="<?= $icon_url . '/credit_card.svg' ?>" alt="">
+  <img src="<?= $icon_url . '/credit_card.svg' ?>" alt="" width="28" height="20">
   <p class="font-2-up-m rs-05">Até 12x</p></div>
   <div class="header__main--vantagens-item">
-  <img src="<?= $icon_url . '/secure.svg' ?>" alt="">
+  <img src="<?= $icon_url . '/secure.svg' ?>" alt="" width="20" height="20">
   <p class="font-2-up-m rs-05">Compras protegidas</p></div>
   <div class="header__main--vantagens-item">
-  <img src="<?= $icon_url . '/shipping.svg' ?>" alt="">
+  <img src="<?= $icon_url . '/shipping.svg' ?>" alt="" width="28" height="20">
   <p class="font-2-up-m rs-05">Frete Grátis</p></div>
   </div>

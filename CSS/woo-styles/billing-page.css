@@ -1,0 +1,52 @@
+.woocommerce form .form-row input.input-text,
+.registration-form input {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 8px 12px;
+  color: var(--cz-09);
+  border: 1px solid var(--az-01);
+  border-radius: 4px;
+}
+
+.woocommerce .checkout label,
+.woocommerce-form label,
+.registration-form label {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.woocommerce .checkout h3,
+.u-columns h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.woocommerce-terms-and-conditions-wrapper,
+.woocommerce-privacy-policy-text,
+.woocommerce-simple-registration-login-link {
+  display: none !important;
+}
+#place_order {
+  background: var(--rs-01) !important;
+  color: var(--rs-05) !important;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}

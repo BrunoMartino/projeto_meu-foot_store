@@ -1,0 +1,15 @@
+.text-page__title,
+.text-page__section {
+  padding: 0 36px 16px 36px;
+}
+.text-page__section h3,
+.text-page__section p,
+.text-page__section li {
+  margin-bottom: 8px;
+}
+.text-page__section:last-child {
+  margin-bottom: 60px;
+}
+.text-page__subtitle {
+  margin-bottom: 12px;
+}

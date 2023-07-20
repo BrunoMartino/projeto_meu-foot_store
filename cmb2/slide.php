@@ -43,14 +43,19 @@ function cmb2_slide_file_list($file_list_meta_id, $url_list_meta_id, $image_size
     echo '<li>';
     $url = isset($urls[$index]) ? esc_url($urls[$index]) : '';
     if (!empty($url)) {
-      echo '<a class="slide-link" href="' . $url . '"><img src="' . $attachment_id . '" alt="Slide Promocional" width="1260" height="460"></a>';
-    } else {
-      echo wp_get_attachment_image_src($attachment_id, $image_size);
+      echo '<a class="slide-link" href="' . $url . '"><img src="' . $attachment_id . '" alt="Slide Promocional" width="1260" height="460"';
+      // Add the loading="lazy" attribute to all items except the first one
+      if ($index !== 0) {
+        echo ' loading="lazy"';
+      }
+      echo '></a>';
     }
     echo '</li>';
   }
   echo '</ul>';
   echo '</div>';
 }
+
+
 
 ?>

@@ -70,8 +70,7 @@
 .footer__content--categorias-gridbox .menu a:hover:before {
   width: 20px;
   height: 20px;
-  background: url("../img-meufoot/icones/heart-fill.svg") center center
-    no-repeat;
+  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
 }
 
 /*controls contact footer-menu*/
@@ -95,7 +94,7 @@
 .email a::before {
   content: "";
   display: block;
-  background: url("../img-meufoot/icones/envelope-fill.svg") center center
+  background: url("./img-meufoot/icones/envelope-fill.svg") center center
     no-repeat;
   width: 24px;
   height: 20px;
@@ -104,7 +103,7 @@
 .wapp a::before {
   content: "";
   display: block;
-  background: url("../img-meufoot/icones/whatsapp.svg") center center no-repeat;
+  background: url("./img-meufoot/icones/whatsapp.svg") center center no-repeat;
   width: 24px;
   height: 28px;
   margin-right: 8px;
@@ -120,6 +119,12 @@
   margin-bottom: 16px;
 }
 .footer__content--intern-pages a {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--rs-04);
   text-align: left;
   max-width: 120ch;
   display: flex;
@@ -140,8 +145,7 @@
 .footer__content--intern-pages a:hover:before {
   width: 20px;
   height: 20px;
-  background: url("../img-meufoot/icones/heart-fill.svg") center center
-    no-repeat;
+  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
 }
 /*controls footer end*/
 .footer__content--end {

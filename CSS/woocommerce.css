@@ -1,446 +1,21 @@
 /* notices styles*/
-
-.woocommerce-notices-wrapper {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.woocommerce-message {
-  border-top: 4px solid var(--rs-01);
-}
-.woocommerce-error,
-.woocommerce-info,
-.woocommerce-message {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-align: left;
-  margin-top: 24px;
-  align-items: center;
-}
-.woocommerce-message::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url("../img-meufoot/icones/heart-fill.svg") center center
-    no-repeat;
-}
+@import url("./woo-styles/notices.css");
 /*cart table styles*/
-.shop_table {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-}
-td.product-quantity .quantity {
-  margin-left: 24px;
-}
-.actions button {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700 !important;
-  font-size: 0.75rem !important;
-  line-height: 1.25rem !important;
-  background-color: var(--cz-08) !important;
-  color: var(--cz-02) !important;
-}
-
-.coupon {
-  display: flex !important;
-  align-items: center;
-}
-.coupon .input-text {
-  width: 200px !important;
-  margin-right: 16px !important;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
-}
-.coupon button {
-  max-width: 25ch;
-  background: var(--az-01) !important;
-  color: var(--az-05) !important;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-  line-height: 1.25rem !important;
-}
-
-.cart_totals h2 {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
-
-.checkout-button {
-  background: var(--rs-01) !important;
-  color: var(--rs-05) !important;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700 !important;
-  font-size: 1.25rem !important;
-  line-height: 1.5rem !important;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-}
-a.shipping-calculator-button,
-.woocommerce-shipping-destination strong {
-  color: var(--az-03) !important;
-}
-a.shipping-calculator-button::before {
-  display: inline-block;
-  content: "";
-  background: url("../img-meufoot/icones/diagonal-arrow.svg") center center
-    no-repeat;
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-a.shipping-calculator-button::after {
-  display: none !important;
-}
-.woocommerce-shipping-calculator button {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-  line-height: 1.25rem !important;
-}
+@import url("./woo-styles/cart-table.css");
 /* billing page styles */
-
-.woocommerce form .form-row input.input-text,
-.registration-form input {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  padding: 8px 12px;
-  color: var(--cz-09);
-  border: 1px solid var(--az-01);
-  border-radius: 4px;
-}
-
-.woocommerce .checkout label,
-.woocommerce-form label,
-.registration-form label {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
-}
-.woocommerce .checkout h3,
-.u-columns h2 {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-.woocommerce-terms-and-conditions-wrapper,
-.woocommerce-privacy-policy-text,
-.woocommerce-simple-registration-login-link {
-  display: none !important;
-}
-#place_order {
-  background: var(--rs-01) !important;
-  color: var(--rs-05) !important;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-}
+@import url("./woo-styles/billing-page.css");
 
 /* login and sign in style*/
-#customer_login {
-  display: flex;
-  justify-content: space-between;
-}
-.woocommerce-LostPassword {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  text-align: right;
-}
-.woocommerce-LostPassword a {
-  color: var(--az-02);
-}
-.woocommerce-form-login__rememberme {
-  display: flex !important;
-  margin-bottom: 24px;
-}
-.woocommerce-form-login__submit,
-.woocommerce-form-register__submit,
-.registration-form .button {
-  background-color: var(--rs-01) !important;
-  color: var(--rs-05) !important;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-}
-.registration-form {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/*custom user menu styles*/
+@import url("./woo-styles/login.css");
+
 /*custom user menu buttons*/
-.woocommerce-account.logged-in .woocommerce {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.woocommerce-account.logged-in .index-title {
-  margin-bottom: 0px;
-}
-.woocommerce-MyAccount-navigation {
-  width: 100% !important;
-}
-.woocommerce-MyAccount-navigation ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 64px auto;
-}
-.woocommerce-MyAccount-navigation ul li {
-  background: #b5e7fc;
-  flex-wrap: nowrap;
-
-  text-align: center;
-  max-width: max-content;
-  border-radius: 16px;
-}
-.woocommerce-MyAccount-navigation ul li:last-child {
-  background: #ffc8c8;
-}
-.woocommerce-MyAccount-navigation ul li:last-child:hover {
-  background: #f79f9f;
-}
-
-.woocommerce-MyAccount-navigation ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  padding: 12px 24px;
-}
+@import url("./woo-styles/user-menu-btn.css");
 /*custom user menu orders table*/
-.woocommerce-MyAccount-orders th,
-.woocommerce-MyAccount-orders td {
-  text-align: center;
-}
-.woocommerce-orders-table__cell-order-total {
-  display: flex !important;
-  flex-direction: column;
-}
-.woocommerce-orders-table__cell-order-actions .woocommerce-button {
-  margin: 0 8px !important;
-}
-.woocommerce-orders-table__cell-order-actions .woocommerce-button.pay {
-  color: var(--rs-05);
-  background: var(--rs-01);
-}
-.woocommerce-orders-table__cell-order-actions .woocommerce-button.cancel {
-  opacity: 0.6;
-}
-
-.woocommerce-MyAccount-navigation ul li.is-active,
-.woocommerce table.my_account_orders .button:hover,
-.woocommerce-MyAccount-navigation ul li:hover {
-  background: linear-gradient(#85cbea, #73bcdc);
-  color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-}
-.woocommerce-account.logged-in .woocommerce::before,
-.woocommerce-account.logged-in .woocommerce::after,
-.woocommerce-MyAccount-navigation-link--edit-address li {
-  display: none;
-}
+@import url("./woo-styles/user-order-table.css");
 /*custom user menu order detail*/
-.woocommerce-account .woocommerce-MyAccount-content,
-.woocommerce-order-details {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  float: none;
-}
-.woocommerce-MyAccount-content p {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: var(--cz-09);
-  margin-bottom: 16px;
-}
-.woocommerce-MyAccount-content h2 {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.woocommerce-MyAccount-content .order-number,
-.woocommerce-MyAccount-content .order-date,
-.woocommerce-MyAccount-content .order-status {
-  font-size: 1rem;
-}
-.woocommerce-MyAccount-content .order-date {
-  background-color: var(--cz-02);
-  color: var(--cz-11);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-.woocommerce-MyAccount-content .order-number {
-  background-color: var(--rs-01);
-  color: var(--rs-05);
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-.woocommerce-MyAccount-content .order-status {
-  background-color: var(--cz-02);
-  color: rgba(0, 0, 0, 0.7);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.order_details {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 16px;
-  max-width: 100%;
-  margin-bottom: 120px !important;
-}
-
-table.order_details tbody td,
-.wc-item-meta li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.wc-item-meta li {
-  gap: 4px;
-}
-.wc-item-meta li p {
-  font-size: 1.125rem;
-  margin-left: 0;
-}
-.wc-item-meta li strong {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
-}
-.product-quantity {
-  font-size: 1rem;
-}
-.product-name img {
-  max-width: 50px;
-}
-td.product-total {
-  display: none !important;
-}
-.wc-item-meta li:first-child,
-.woocommerce-column--billing-address,
-table.order_details thead {
-  display: none;
-}
-table.order_details tfoot th {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
+@import url("./woo-styles/user-order-details.css");
 /*custom user menu track code*/
-.wc-correios-tracking__table {
-  position: relative;
-}
-.woocommerce-order-details::after {
-  content: "ATENÇÃO: Nossa sessão de rastreio é atualizada automáticamente com chave fornecida pelo Correios do Brasil. Caso seu produto não esteja atualizando, por favor, clique no botão acima e use a página de rastreio dos Correios do Brasil";
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.85rem;
-  line-height: 1rem;
-  letter-spacing: 0.02rem;
-  margin-top: 8px;
-  margin-bottom: 120px;
-}
-.wc-correios-tracking__description {
-  max-width: 90ch !important;
-  margin-bottom: 24px !important;
-}
-
-.wc-correios-tracking__description strong {
-  font-size: 1.125rem;
-  background-color: var(--rs-01);
-  color: var(--rs-05);
-  padding: 4px 8px;
-  border-radius: 8px;
-}
-.wc-correios-tracking__table thead tr th:nth-child(2),
-.wc-correios-tracking__table tbody tr td:nth-child(2) {
-  display: none;
-}
-input.wc-correios-tracking__button.button {
-  background-color: #d0ffa1;
-  color: #0a1201;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-}
-input.wc-correios-tracking__button.button:hover {
-  background-color: #a3de67;
-  color: #0a1201;
-}
+@import url("./woo-styles/user-order-track.css");
 
 /*custom user menu destination address*/
 .woocommerce .col2-set .col-2,
@@ -449,58 +24,10 @@ input.wc-correios-tracking__button.button:hover {
 }
 
 /*custom user menu users saved address*/
-.addresses {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 120px;
-}
-.addresses h3 {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
-  margin-bottom: 16px;
-}
-.addresses address {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  border: 2px solid var(--cz-04);
-  padding: 12px;
-  margin-bottom: 24px;
-}
-.addresses .edit {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  background-color: var(--az-01);
-  color: var(--az-05);
-  padding: 4px 12px;
-  border-radius: 8px;
-}
-.woocommerce-address-fields p .button {
-  margin: 24px 0;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem;
-  text-transform: uppercase;
-  background-color: var(--rs-01);
-  color: var(--rs-05);
-}
+@import url("./woo-styles/user-menu-address.css");
+
 /*custom user menu Edit Account User-data*/
+
 .woocommerce-EditAccountForm fieldset {
   margin-top: 64px;
 }
@@ -516,7 +43,9 @@ input.wc-correios-tracking__button.button:hover {
   background-color: var(--rs-01);
   color: var(--rs-05);
 }
+
 /* mobile changes in style*/
+
 @media (max-width: 960px) {
   .woocommerce-MyAccount-content {
     padding: 0 36px;
@@ -534,8 +63,27 @@ input.wc-correios-tracking__button.button:hover {
   .product-thumbnail::before {
     display: none;
   }
+  .woocommerce-message {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 12px;
+  }
+
   .woocommerce-MyAccount-content {
     padding: 0 36px;
+  }
+  .woocommerce-order {
+    padding: 0 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .order_details {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
   }
   td.product-quantity .quantity {
     margin-left: 16px !important;
@@ -577,10 +125,6 @@ input.wc-correios-tracking__button.button:hover {
       grid-template-columns: 1fr 1fr;
       justify-items: center;
       gap: 16px;
-    }
-    .order_details {
-      flex-direction: column;
-      max-width: max-content;
     }
     .woocommerce-MyAccount-content p {
       max-width: 45ch;

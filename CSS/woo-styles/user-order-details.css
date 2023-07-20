@@ -1,0 +1,99 @@
+.woocommerce-account .woocommerce-MyAccount-content,
+.woocommerce-order-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  float: none;
+}
+.woocommerce-MyAccount-content p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--cz-09);
+  margin-bottom: 16px;
+}
+.woocommerce-MyAccount-content h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.woocommerce-MyAccount-content .order-number,
+.woocommerce-MyAccount-content .order-date,
+.woocommerce-MyAccount-content .order-status {
+  font-size: 1rem;
+}
+.woocommerce-MyAccount-content .order-date {
+  background-color: var(--cz-02);
+  color: var(--cz-11);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.woocommerce-MyAccount-content .order-number {
+  background-color: var(--rs-01);
+  color: var(--rs-05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.woocommerce-MyAccount-content .order-status {
+  background-color: var(--cz-02);
+  color: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.order_details {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+  max-width: 100%;
+  margin-bottom: 120px !important;
+}
+
+table.order_details tbody td,
+.wc-item-meta li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wc-item-meta li {
+  gap: 4px;
+}
+.wc-item-meta li p {
+  font-size: 1.125rem;
+  margin-left: 0;
+}
+.wc-item-meta li strong {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+.product-quantity {
+  font-size: 1rem;
+}
+.product-name img {
+  max-width: 50px;
+}
+td.product-total {
+  display: none !important;
+}
+.wc-item-meta li:first-child,
+.woocommerce-column--billing-address,
+table.order_details thead {
+  display: none;
+}
+table.order_details tfoot th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}

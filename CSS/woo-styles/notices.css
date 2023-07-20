@@ -1,0 +1,38 @@
+.woocommerce-notices-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.woocommerce-message {
+  border-top: 4px solid var(--rs-01);
+}
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+  margin-top: 24px;
+  align-items: center;
+}
+.woocommerce-message::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
+}
+.woocommerce-message .button {
+  font-family: "Nunito Sans" !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5rem !important;
+  letter-spacing: 0.02rem !important;
+  text-transform: uppercase !important;
+  color: var(--rs-05) !important;
+  background-color: var(--rs-01) !important;
+}

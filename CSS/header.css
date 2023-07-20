@@ -76,7 +76,7 @@
   height: 36px;
   justify-self: end;
   text-indent: -10000px;
-  background: url("../img-meufoot/icones/busca.svg") center center no-repeat;
+  background: url("./img-meufoot/icones/busca.svg") center center no-repeat;
   cursor: pointer;
   background-position: -1;
   border: none;
@@ -98,7 +98,7 @@
 .header__login--cadastro a::before {
   display: inline-block;
   content: "";
-  background: url("../img-meufoot/icones/criar_conta.svg") center center
+  background: url("./img-meufoot/icones/criar_conta.svg") center center
     no-repeat;
   width: 20px;
   height: 20px;
@@ -113,7 +113,7 @@
 .header__login--minha-conta a::before {
   display: inline-block;
   content: "";
-  background: url("../img-meufoot/icones/login.svg") center center no-repeat;
+  background: url("./img-meufoot/icones/login.svg") center center no-repeat;
   width: 20px;
   height: 20px;
 }
