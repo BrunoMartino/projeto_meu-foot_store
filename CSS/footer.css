@@ -14,49 +14,31 @@
   font-size: 1.25rem;
 }
 /*controls category footer-menu*/
-.footer__content--categorias {
-  display: flex;
-  flex-direction: column;
+.footer__content--categorias-gridbox {
+  max-width: 100%;
 }
-.footer__content--categorias-gridbox .sub-menu {
-  display: none;
-}
-.footer__content--categorias-gridbox .menu {
+.footer__content--categorias-gridbox ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px 56px;
+  gap: 12px;
 }
-.footer__content--categorias-gridbox .menu li {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  background: transparent;
-  border: none;
-  border-top: none;
-  border-radius: 0;
-  cursor: pointer;
-}
-.footer__content--categorias-gridbox .menu li:first-child,
-.footer__content--categorias-gridbox .menu li:nth-child(2),
-.footer__content--categorias-gridbox .menu li:nth-child(3),
-.footer__content--categorias-gridbox .menu li:nth-child(4) {
-  padding-top: 0px;
-}
-.footer__content--categorias-gridbox .menu a {
+.footer__content--categorias-gridbox ul li a {
   font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  height: 100%;
   font-style: normal;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
-  display: block;
   border: 4px solid transparent;
   color: var(--rs-04);
   text-align: left;
   max-width: 120ch;
   display: flex;
   align-items: center;
+  position: relative;
 }
-.footer__content--categorias-gridbox .menu a::before {
+.footer__content--categorias-gridbox ul li a::before {
   content: "";
   display: block;
   background: var(--rs-04);
@@ -64,13 +46,9 @@
   height: 2px;
   margin-right: 4px;
 }
-.footer__content--categorias-gridbox .menu-item a:hover {
+.footer__content--categorias-gridbox ul li a:hover {
   color: var(--rs-02);
-}
-.footer__content--categorias-gridbox .menu a:hover:before {
-  width: 20px;
-  height: 20px;
-  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
+  font-weight: 800;
 }
 
 /*controls contact footer-menu*/
@@ -108,7 +86,6 @@
   height: 28px;
   margin-right: 8px;
 }
-
 /*controls useful links footer-menu*/
 .footer__content--intern-pages {
   display: flex;
@@ -128,7 +105,7 @@
   text-align: left;
   max-width: 120ch;
   display: flex;
-  font-weight: 400;
+  font-weight: 600;
   align-items: center;
 }
 .footer__content--intern-pages a::before {
@@ -141,11 +118,7 @@
 }
 .footer__content--intern-pages a:hover {
   color: var(--rs-02);
-}
-.footer__content--intern-pages a:hover:before {
-  width: 20px;
-  height: 20px;
-  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
+  font-weight: 800;
 }
 /*controls footer end*/
 .footer__content--end {
@@ -189,8 +162,8 @@
     font-size: 1.125rem;
     margin-bottom: 8px;
   }
-  .footer__content--categorias-gridbox .menu {
-    gap: 8px 28px;
+  .footer__content--categorias-gridbox {
+    margin-bottom: 24px;
   }
   .footer__content--contact li,
   .footer__content--intern-pages li {

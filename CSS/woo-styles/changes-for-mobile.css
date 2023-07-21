@@ -1,0 +1,86 @@
+@media (max-width: 960px) {
+  .woocommerce-MyAccount-content {
+    padding: 0 36px;
+  }
+}
+@media (max-width: 760px) {
+  #customer_login {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+  .product-thumbnail {
+    display: block !important;
+    float: right;
+  }
+  .product-thumbnail::before {
+    display: none;
+  }
+  .woocommerce-message {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 12px;
+  }
+
+  .woocommerce-MyAccount-content {
+    padding: 0 36px;
+  }
+  .woocommerce-order {
+    padding: 0 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .order_details {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+  }
+  td.product-quantity .quantity {
+    margin-left: 16px !important;
+  }
+  .wc-correios-tracking__table tfoot tr td::before {
+    display: none;
+  }
+  .wc-correios-tracking__table tfoot tr td {
+    text-align: left !important;
+  }
+  .wc-correios-tracking__table tbody tr td:first-child::before {
+    content: "Última Atualização:";
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+  }
+  .wc-correios-tracking__table tbody tr td:last-child::before {
+    content: "Status da Encomenda:";
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+  }
+  .addresses {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 600px) {
+    .woocommerce-MyAccount-navigation ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      gap: 16px;
+    }
+    .woocommerce-MyAccount-content p {
+      max-width: 45ch;
+      line-height: 2rem;
+    }
+  }
+}
