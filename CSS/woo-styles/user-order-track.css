@@ -51,4 +51,5 @@ input.wc-correios-tracking__button.button:hover {
 .copy-button {
   max-width: 24px;
   height: 100%;
+  cursor: pointer;
 }

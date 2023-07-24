@@ -146,6 +146,14 @@
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .footer__content--intern-pages a,
+  .email a,
+  .wapp a,
+  .footer__content--categorias-gridbox ul li a {
+    padding: 8px;
+  }
+}
 @media (max-width: 420px) {
   .footer__content {
     padding: 24px;
