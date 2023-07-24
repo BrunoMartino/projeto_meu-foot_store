@@ -43,3 +43,12 @@ input.wc-correios-tracking__button.button:hover {
   background-color: #a3de67;
   color: #0a1201;
 }
+.wc-correios-tracking__description {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.copy-button {
+  max-width: 24px;
+  height: 100%;
+}

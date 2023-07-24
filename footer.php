@@ -5,7 +5,7 @@
         <h3 class="font-1-up-l rs-02">Categorias:</h3>
         <?php
           wp_nav_menu([
-          'menu'=> 'footer__content--categorias',
+          'menu'=> 'footer-categories',
           'container' => 'nav',
           'container_class' => 'footer__content--categorias-gridbox',
            ])

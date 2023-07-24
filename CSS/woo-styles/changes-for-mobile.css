@@ -32,6 +32,16 @@
     justify-content: center;
     align-items: center;
   }
+  .woocommerce-page table.shop_table_responsive tr {
+    padding: 16px;
+  }
+  .woocommerce-page table.shop_table_responsive tr:nth-child(even) {
+    background-color: var(--cz-02);
+  }
+  .woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+  .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
+    background-color: rgba(0, 0, 0, 0);
+  }
   .order_details {
     display: flex;
     flex-direction: column;

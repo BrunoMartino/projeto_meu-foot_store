@@ -5,6 +5,8 @@ import Cat_Swachtes from "./modulos/category-swatches.js";
 import Img_Swachtes from "./modulos/image-swatches.js";
 import IncrementQty from "./modulos/increment-qty.js";
 import ChangeGallery from "./modulos/change-main-gallery.js";
+import ChangeColor from "./modulos/change-color.js";
+import CopyButton from "./modulos/copy-btn.js";
 
 const menuMobile = new MenuMobile(
   '[data-menu="button"]',
@@ -63,4 +65,17 @@ if (galleryExist) {
     "[data-gallery=gallery-main]"
   );
   galleryChange.init();
+}
+const statusExist = document.querySelector(".order-status");
+if (statusExist) {
+  const colorChange = new ChangeColor(".order-status");
+  colorChange.init();
+}
+const trackExist = document.querySelector(".wc-correios-tracking__description");
+if (trackExist) {
+  const buttonCopy = new CopyButton(
+    ".wc-correios-tracking__description",
+    ".wc-correios-tracking__description strong"
+  );
+  buttonCopy.init();
 }
