@@ -2,7 +2,7 @@
 .newest-galeria,
 .most_sales-galeria {
   margin-bottom: 24px;
-  padding: 36px 0;
+  padding: 36px;
   overflow-y: hidden;
 }
 .chrono-galeria .product-list {

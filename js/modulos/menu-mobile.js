@@ -7,6 +7,7 @@ export default class MenuMobile {
     this.links = Array.from(document.querySelectorAll(links));
     this.submenu = document.querySelectorAll(submenu);
     this.html = document.querySelector("html");
+    this.isOpen = false;
 
     if (events === undefined) {
       this.events = ["touchstart", "click"];
@@ -19,20 +20,30 @@ export default class MenuMobile {
 
   openMenu(event) {
     if (event.type === "touchstart") event.preventDefault();
-    this.menuList.forEach((element) => {
-      element.classList.add("ativo");
-    });
-    this.menuButton.classList.add("ativo");
-    outsideClick(Array.from(this.menuList), this.events, () => {
+    if (!this.isOpen) {
+      this.menuList.forEach((element) => {
+        element.classList.add("ativo");
+      });
+      this.menuButton.classList.add("ativo");
+      outsideClick(Array.from(this.menuList), this.events, () => {
+        this.menuList.forEach((element) => {
+          element.classList.remove("ativo");
+        });
+        this.menuButton.classList.remove("ativo");
+        this.isOpen = false;
+      });
+      this.isOpen = true;
+    } else {
       this.menuList.forEach((element) => {
         element.classList.remove("ativo");
       });
       this.menuButton.classList.remove("ativo");
-    });
+      this.isOpen = false;
+    }
   }
   addMenuMobileEvents() {
     this.events.forEach((event) => {
-      this.menuButton.addEventListener(event, this.openMenu, { passive: true });
+      this.menuButton.addEventListener(event, this.openMenu);
     });
   }
   addSubmenuEvents() {

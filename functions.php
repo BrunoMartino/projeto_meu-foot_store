@@ -194,6 +194,9 @@ function alterar_rotulos_woocommerce( $translated_text, $text, $domain ) {
       case 'Last Name':
           $translated_text = 'Último Nome';
           break;
+      case 'Password':
+        $translated_text = 'Senha';
+        break;
       // Adicione outros rótulos que deseja alterar aqui
       
   }

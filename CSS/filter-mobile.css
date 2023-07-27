@@ -44,7 +44,7 @@
     background: var(--cz-01);
     width: 240px;
     z-index: 199;
-    top: 372px;
+    top: 360px;
     left: 20px;
     padding: 60px 24px 10px 0px;
     justify-content: start;
@@ -56,10 +56,14 @@
     display: none;
   }
 }
+
 @media (max-width: 325px) {
   .breadcrumb {
     justify-content: center;
     align-items: center;
     gap: 24px;
+  }
+  .filters.ativo {
+    top: 390px;
   }
 }

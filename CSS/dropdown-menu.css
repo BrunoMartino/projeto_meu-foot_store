@@ -1,0 +1,55 @@
+#menu-categorias .sub-menu {
+  display: none;
+}
+#menu-categorias .menu-item-has-children:hover > .sub-menu {
+  display: flex;
+  flex-direction: column;
+  animation: show-up 0.3s forwards;
+}
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+#menu-categorias .sub-menu {
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 200;
+  top: 210px;
+}
+#menu-categorias .sub-menu li {
+  border: 2px solid var(--cz-03);
+  border-radius: 4px;
+  padding-top: 12px;
+  height: 72px;
+  position: relative;
+}
+#menu-categorias .sub-menu li:first-child::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("./img-meufoot/icones/heart-fill.svg") center center no-repeat;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+@media (max-width: 960px) {
+  #menu-categorias .sub-menu {
+    top: -4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    margin-bottom: 8px;
+  }
+  #menu-categorias .sub-menu li:first-child::before {
+    left: -10px;
+    top: 28px;
+    transform: rotate(-90deg);
+  }
+}

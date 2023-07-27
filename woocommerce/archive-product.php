@@ -26,11 +26,14 @@ $data['products'] = format_products($products);
   <?php 
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     foreach($attribute_taxonomies as $attribute) {
-      the_widget('WC_Widget_Layered_Nav', [
-        'title' => $attribute -> attribute_label,
-        'attribute' => $attribute -> attribute_name,
-      ]);
-    }
+      if($attribute->attribute_name !=='imagem') {
+        the_widget('WC_Widget_Layered_Nav', [
+          'title' => $attribute -> attribute_label,
+          'attribute' => $attribute -> attribute_name,
+        ]);
+      }
+      }
+
     ?>
   </div>
   <div class="filter">

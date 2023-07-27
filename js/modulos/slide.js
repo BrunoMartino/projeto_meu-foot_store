@@ -87,7 +87,7 @@ export class Slide {
       passive: true,
     });
     this.wrapper.addEventListener("mouseup", this.onEnd);
-    this.wrapper.addEventListener("touchend", this.onEnd, { passive: true });
+    this.wrapper.addEventListener("touchend", this.onEnd);
   }
 
   // init slides navigation

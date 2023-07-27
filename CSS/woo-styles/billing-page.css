@@ -1,3 +1,9 @@
+#customer_details,
+#order_review_heading,
+#order_review {
+  padding: 0 24px;
+}
+
 .woocommerce form .form-row input.input-text,
 .registration-form input {
   font-family: "Nunito Sans";

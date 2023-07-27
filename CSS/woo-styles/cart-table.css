@@ -6,6 +6,11 @@
   line-height: 1.5rem;
   letter-spacing: 0.02rem;
 }
+.cart_item .product-thumbnail {
+  display: block !important;
+  float: right;
+}
+
 td.product-quantity .quantity {
   margin-left: 24px;
 }

@@ -36,6 +36,7 @@
   color: var(--az-05);
   padding: 4px 12px;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 .woocommerce-address-fields p .button {
   margin: 24px 0;

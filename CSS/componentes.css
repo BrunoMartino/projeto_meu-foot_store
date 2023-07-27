@@ -126,17 +126,8 @@
   }
 }
 @media (max-width: 420px) {
-  .product-item img {
-    max-width: 280px;
-    height: 100%;
-  }
   .product-item:before {
     width: max-content;
     opacity: 1;
-  }
-  @media (max-width: 320px) {
-    .product-item img {
-      max-width: 260px;
-    }
   }
 }
