@@ -119,10 +119,28 @@
 .meufoot_cart {
   align-items: center;
   padding: 0 16px;
+  position: relative;
+}
+.meufoot_cart-cont {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: var(--az-04);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--cz-01);
+  position: absolute;
+  top: -5px;
+  left: 26px;
 }
 .meufoot_cart img {
   display: block;
 }
+
 /*control second menu style*/
 .header_menu--second ul {
   width: 100%;
@@ -244,11 +262,12 @@
   .header_vantagens p {
     font-size: 0.75rem;
   }
-  .login-options {
-    order: 2;
-  }
   .meufoot_cart img {
-    width: 28px;
+    width: 36px;
     height: 100%;
+  }
+  .meufoot_cart-cont {
+    width: 16px;
+    height: 16px;
   }
 }

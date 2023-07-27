@@ -48,18 +48,32 @@
     border-radius: 8px;
   }
 
-  [data-menu="list"].ativo #menu-categorias.menu {
+  [data-menu="list"].ativo #menu-categorias.menu,
+  [data-menu="list"].login-options.ativo {
     display: flex;
   }
 
   #mobile {
+    position: absolute;
     flex-direction: column-reverse;
     border-top: 2px solid var(--rs-01);
-    top: 472px;
-    z-index: 199;
+    background-color: var(--cz-01);
+    top: 490px;
+    z-index: 3000;
     left: 0;
-    margin-top: 12px;
-    padding: 18px 12px 18px 12px;
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+  #mobile li {
+    border: 2px solid var(--cz-03);
+    padding: 8px;
+    width: 156px;
+  }
+  #mobile li:first-child {
+    border-radius: 0 0 4px 4px;
+  }
+  #mobile li:last-child {
+    border-top: none;
   }
   #menu-categorias.menu li {
     position: relative;

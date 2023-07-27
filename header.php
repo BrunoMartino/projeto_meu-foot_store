@@ -33,8 +33,8 @@ $cart_count = WC()->cart->get_cart_contents_count();
 <div class='header_menu'>
     <div class='header_menu--first'>
     <button data-menu='button' class='menu-mobile' aria-expanded='false'>Menu</button>
-  <ul class='login-options'>
-    <li><a href="/crie-sua-conta/"  data-menu='list' class="font-1-up-xs cz-09 meufoot-sign_up">Crie sua Conta!</a></li>
+  <ul class='login-options' id='mobile' data-menu='list'>
+    <li><a href="/crie-sua-conta/" class="font-1-up-xs cz-09 meufoot-sign_up">Crie sua Conta!</a></li>
     <li><a href="/login/" class="font-1-up-xs cz-09 meufoot-login">Login</a></li>
   </ul>
   <div class="header_search">
@@ -46,7 +46,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
   </div>
   <a class="meufoot_cart" href="/carrinho"><img src="<?= $icon_url . '/add_cart.svg' ?>" alt="carrinho"  width="40" height="40">
         <?php if($cart_count) { ?>
-       <span class="carrinho_cont"><?= $cart_count; ?></span>
+       <span class="meufoot_cart-cont"><?= $cart_count; ?></span>
        <?php } ?>
         <p class="font-1-up-xs rs-05">Comprar</p>
   </a>
