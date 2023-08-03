@@ -235,7 +235,6 @@ function add_async_defer_lazy_to_plugin_assets($tag, $handle, $src) {
   if (strpos($src, '/wp-content/plugins/') !== false || strpos($src, '/wp-includes/') !== false) {
       // Verificar se o recurso é um script
       if (wp_script_is($handle, 'registered')) {
-          $tag = str_replace('<script', '<script async', $tag);
           $tag = str_replace('></script>', ' loading="lazy"></script>', $tag);
       }
       
