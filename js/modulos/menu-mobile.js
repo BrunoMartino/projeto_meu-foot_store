@@ -17,12 +17,9 @@ export default class MenuMobile {
     this.linkPreventRemove = this.linkPreventRemove.bind(this);
   }
 
-  activeSubMenu() {
-    const dropdownMenuActive = new ActiveDropDownMenu(
-      "#menu-categorias > .menu-item",
-      ".sub-menu"
-    );
-    dropdownMenuActive.init();
+  activeSubMenu(parentCat, submenu) {
+    const submenuActive = new ActiveDropDownMenu(parentCat, submenu);
+    submenuActive.init();
   }
   linkPreventRemove(event) {
     event.preventDefault();
