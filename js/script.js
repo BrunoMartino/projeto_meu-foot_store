@@ -7,22 +7,19 @@ import IncrementQty from "./modulos/increment-qty.js";
 import ChangeGallery from "./modulos/change-main-gallery.js";
 import ChangeColor from "./modulos/change-color.js";
 import CopyButton from "./modulos/copy-btn.js";
+import ActiveDropDownMenu from "./modulos/active-dropdown-menu.js";
 
-const menuMobile = new MenuMobile(
-  '[data-menu="button"]',
-  '[data-menu="list"]',
-  "#menu-categorias > li.menu-item > a",
-  "#menu-categorias .sub-menu"
-);
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-const filterMobile = new MenuMobile(
-  ".filter-mobile",
-  ".filters",
-  "#menu-categorias-internas > li.menu-item > a",
-  "#menu-categorias-internas .sub-menu"
-);
+const filterMobile = new MenuMobile(".filter-mobile", ".filters");
 filterMobile.init();
+
+const dropdownFilterActive = new ActiveDropDownMenu(
+  "#menu-categorias-internas > .menu-item",
+  ".sub-menu"
+);
+dropdownFilterActive.init();
 
 const slideExist = document.querySelector('[data-home="slide"]');
 if (slideExist) {

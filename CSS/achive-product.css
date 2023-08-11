@@ -95,12 +95,12 @@
   color: var(--cz-08);
 }
 #menu-categorias-internas.menu a:hover,
-#menu-categorias-internas.menu a.ativo {
+#menu-categorias-internas.menu a.active {
   color: var(--rs-02);
 }
 
 #menu-categorias-internas.menu a:hover::before,
-#menu-categorias-internas.menu a.ativo::before {
+#menu-categorias-internas.menu a.active::before {
   background-color: var(--rs-03);
 }
 
@@ -120,7 +120,7 @@
   display: none;
   flex-direction: column;
 }
-#menu-categorias-internas.menu .sub-menu.ativo {
+#menu-categorias-internas.menu .sub-menu.active {
   position: static;
   display: flex;
 }

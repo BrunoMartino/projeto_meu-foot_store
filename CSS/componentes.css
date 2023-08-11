@@ -29,6 +29,7 @@
 .product-item h2 {
   font-size: 1.25rem;
   padding: 8px 0px 24px 8px;
+  max-width: 20ch;
 }
 .product-item {
   border-radius: 4px 0 4px 0;

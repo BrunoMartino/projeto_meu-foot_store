@@ -164,13 +164,6 @@
 .header_menu--second ul li:first-child {
   border-left: none;
 }
-.header_menu--second ul li:first-child,
-.header_menu--second ul li:nth-child(2),
-.header_menu--second ul li:nth-child(3),
-.header_menu--second ul li:nth-child(4) {
-  padding-top: 8px;
-  padding-left: 8px;
-}
 
 .header_menu--second ul li a {
   display: block;

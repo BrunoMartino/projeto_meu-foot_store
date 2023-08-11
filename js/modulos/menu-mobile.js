@@ -1,11 +1,10 @@
 import outsideClick from "./outsideclick.js";
+import ActiveDropDownMenu from "./active-dropdown-menu.js";
 
 export default class MenuMobile {
-  constructor(menuButton, menuList, links, submenu, events) {
+  constructor(menuButton, menuList, events) {
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelectorAll(menuList);
-    this.links = Array.from(document.querySelectorAll(links));
-    this.submenu = document.querySelectorAll(submenu);
     this.html = document.querySelector("html");
     this.isOpen = false;
 
@@ -15,7 +14,18 @@ export default class MenuMobile {
       this.events = events;
     }
     this.openMenu = this.openMenu.bind(this);
-    this.activeSubmenu = this.activeSubmenu.bind(this);
+    this.linkPreventRemove = this.linkPreventRemove.bind(this);
+  }
+
+  activeSubMenu() {
+    const dropdownMenuActive = new ActiveDropDownMenu(
+      "#menu-categorias > .menu-item",
+      ".sub-menu"
+    );
+    dropdownMenuActive.init();
+  }
+  linkPreventRemove(event) {
+    event.preventDefault();
   }
 
   openMenu(event) {
@@ -25,6 +35,9 @@ export default class MenuMobile {
         element.classList.add("ativo");
       });
       this.menuButton.classList.add("ativo");
+
+      this.activeSubMenu();
+
       outsideClick(Array.from(this.menuList), this.events, () => {
         this.menuList.forEach((element) => {
           element.classList.remove("ativo");
@@ -46,34 +59,10 @@ export default class MenuMobile {
       this.menuButton.addEventListener(event, this.openMenu);
     });
   }
-  addSubmenuEvents() {
-    this.links.forEach((link) => {
-      link.addEventListener("click", this.activeSubmenu);
-    });
-  }
-
-  activeSubmenu(event) {
-    event.preventDefault();
-    this.links.forEach((link) => {
-      link.classList.remove("ativo");
-    });
-    this.submenu.forEach((element) => {
-      element.classList.remove("ativo");
-    });
-    const currentLink = event.target;
-    const currentSubMenu = currentLink.nextElementSibling;
-    currentLink.classList.add("ativo");
-    currentSubMenu.classList.add("ativo");
-
-    setTimeout(() => {
-      event.target.removeEventListener("click", this.activeSubmenu);
-    }, 150);
-  }
 
   init() {
     if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
-      this.addSubmenuEvents();
     }
     return this;
   }

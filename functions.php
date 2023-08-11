@@ -4,33 +4,26 @@ function meufoot_add_woocommerce_support() {
   add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'meufoot_add_woocommerce_support');
-
 function meufoot_css() {
   wp_register_style('meufoot-style', get_template_directory_uri() . '/style.css', [], '1.0.0', false);
   wp_enqueue_style('meufoot-style');
 }
 add_action('wp_enqueue_scripts', 'meufoot_css');
- 
 // Add new images sizes and custom crops on uploaded imagens from WP Library
-
 function meufoot_custom_images() {
   add_image_size("category-box", 50, 50, ['center', 'top']);
   add_image_size("slide-image", 1280, 560);
   add_image_size('product-box', 300, 300, ['center', 'top']);
-  add_image_size('prodcuct-gallery', 600, 560, ['center', 'top']);
+  add_image_size('product-gallery', 600, 560, ['center', 'top']);
   update_option("medium_crop", 1);
 }
-
 add_action('after_setup_theme', 'meufoot_custom_images');
-
 // controls product display on category pages
 function meufoot_chrono_loop_per_page() {
   return 8 ;
 }
-
 add_filter('loop_shop_per_page','meufoot_chrono_loop_per_page');
 add_filter("body_class", 'remove_some_body_class');
-
 // remove useless CSS bodyclass that are default for Woocommerce
 function remove_some_body_class($classes) {
   $woo_class = array_search('woocommerce' , $classes);
@@ -42,7 +35,6 @@ function remove_some_body_class($classes) {
   }
   return $classes;
 }
-
 // format and deploy Html and CSS class for products on home and category pages.
 function format_products($products, $img_size = "medium") {
   $products_final=[];
@@ -64,7 +56,6 @@ function format_products($products, $img_size = "medium") {
   }
   return $products_final;
 }
-
 function meufoot_product_list($products) { ?>
   <ul class='product-list'>
 <?php foreach($products as $product) { ?>
@@ -88,34 +79,32 @@ function meufoot_product_list($products) { ?>
   <?php } ?>
   </ul>
 <?php } ?>
-
 <?php
 function meufoot_format_single_product($id, $img_size = 'medium') {
-  $product =(wc_get_product( $id ));
+  $product = wc_get_product($id);
   $gallery_ids = $product->get_gallery_attachment_ids();
   $gallery = [];
-  if($gallery_ids) {
+
+  if ($gallery_ids) {
     foreach ($gallery_ids as $img_id) {
-      $gallery[] = wp_get_attachment_image_src($img_id, $img_size)[0];
+      $gallery[] = wp_get_attachment_image_src($img_id, 'product-gallery')[0];
     }
   }
-  return [
 
+  return [
     'id' => $id,
-    'name'=>$product->get_name(),
-    'regular-price'=> $product->get_variation_regular_price('min', true),
-    'sell-price'=>$product->get_variation_sale_price('max', true),
-    'link'=>$product->get_permalink(),
-    'sku'=>$product->get_sku(),
-    'description'=> $product->get_description(),
-    'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
-    'gallery'=>$gallery
+    'name' => $product->get_name(),
+    'regular-price' => $product->get_variation_regular_price('min', true),
+    'sell-price' => $product->get_variation_sale_price('max', true),
+    'link' => $product->get_permalink(),
+    'sku' => $product->get_sku(),
+    'description' => $product->get_description(),
+    'img' => wp_get_attachment_image_src($product->get_image_id(), 'product-gallery')[0],
+    'gallery' => $gallery,
   ];
 }
 ?>
-
 <?php 
-
 function meufoot_get_product_variation($id, $image_size = 'medium') {
   $product = wc_get_product($id);
 
@@ -150,7 +139,7 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
         sort($attribute_values);
         $unique_values = array_unique($attribute_values);
         foreach ($unique_values as $value) {
-          echo '<li class="cat-variation"><p class="font-1-s">' . $value . '</p></li>';
+          echo '<li class="cat-variation"><p class="font-1-up-s">' . $value . '</p></li>';
         }
         echo '</ul>';
         echo '</div>';
@@ -160,7 +149,6 @@ function meufoot_get_product_variation($id, $image_size = 'medium') {
   
 }
 ?>
-
 <?php 
 function custom_product_title( $product_title, $cart_item, $cart_item_key ) {
   $product = $cart_item['data'];
@@ -170,7 +158,6 @@ function custom_product_title( $product_title, $cart_item, $cart_item_key ) {
 }
 add_filter( 'woocommerce_cart_item_name', 'custom_product_title', 10, 3 );
 ?>
-
 <?php 
 
 function meufoot_custom_user_menu($menu_links) {
@@ -226,16 +213,14 @@ function custom_order_item_details($item_name, $item, $is_visible) {
 
   return $item_name;
 }
-
 add_filter('woocommerce_order_item_name', 'custom_order_item_details', 10, 3);
 add_filter('woocommerce_order_item_thumbnail', 'custom_order_item_details', 10, 3);
-
 function add_async_defer_lazy_to_plugin_assets($tag, $handle, $src) {
   // Verificar se o recurso é carregado por um plugin ou pelo diretório wp-includes
   if (strpos($src, '/wp-content/plugins/') !== false || strpos($src, '/wp-includes/') !== false) {
       // Verificar se o recurso é um script
       if (wp_script_is($handle, 'registered')) {
-          $tag = str_replace('></script>', ' loading="lazy"></script>', $tag);
+          $tag = str_replace('></script>', '"></script>', $tag);
       }
       
       // Verificar se o recurso é um estilo
@@ -246,18 +231,9 @@ function add_async_defer_lazy_to_plugin_assets($tag, $handle, $src) {
   
   return $tag;
 }
-
 add_filter('script_loader_tag', 'add_async_defer_lazy_to_plugin_assets', 10, 3);
 add_filter('style_loader_tag', 'add_async_defer_lazy_to_plugin_assets', 10, 3);
-
-
-
-
-
 ?>
-
-
-
 <?php 
 require_once get_template_directory() . '/cmb2/load.php'
 ?>

@@ -8,8 +8,10 @@
 
 <main class="container product-main">
 <?php
-if(have_posts()) { while(have_posts()) { the_post(); 
-  $product_data = meufoot_format_single_product(get_the_ID(), $image_size = 'prodcuct-gallery'); 
+if (have_posts()) {
+  while (have_posts()) {
+    the_post();
+    $product_data = meufoot_format_single_product(get_the_ID(), $image_size = 'product-gallery');
 ?>
   <div class="product-gallery" data-gallery="gallery">
     <div class="product-gallery__list">

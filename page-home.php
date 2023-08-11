@@ -32,11 +32,13 @@ if(have_posts()){while(have_posts()){the_post();?>
    <button class="prev_btn"></button>
     <?php cmb2_slide_file_list('add_slide_home','add_slide_home_url',$image_size = "slide-image") ?>
    <button class="next_btn"></button>
-</section>   
+</section>
+<?php if($data['cronometro']) { ?>  
 <section class="container chrono-galeria" data-home="crono">
   <h1 class="font-2-up-xl">Promoção Relâmpago</h1>
-  <?php meufoot_product_list($data['cronometro']) ?>
+  <?php meufoot_product_list($data['cronometro']); ?>
 </section>
+<?php } ?>
 <section class="container most_sales-galeria">
   <h1 class="font-2-up-xl">Mais Vendidos</h1>
   <?php meufoot_product_list($data['most_sales']) ?>
