@@ -8,6 +8,7 @@ import ChangeGallery from "./modulos/change-main-gallery.js";
 import ChangeColor from "./modulos/change-color.js";
 import CopyButton from "./modulos/copy-btn.js";
 import ActiveDropDownMenu from "./modulos/active-dropdown-menu.js";
+import GallerySlide from "./modulos/slide-gallery.js";
 
 const menuMobile = new MenuMobile(
   '[data-menu="button"]',
@@ -38,6 +39,7 @@ if (slideExist) {
   slide.addArrow(".prev_btn", ".next_btn");
   slide.addControl();
 }
+
 const cronoExist = document.querySelector('[data-home="crono"]');
 if (cronoExist) {
   const timer = new RegressiveTimer(
@@ -73,6 +75,17 @@ if (galleryExist) {
   );
   galleryChange.init();
 }
+
+const slideGallery = document.querySelector(".product-gallery__list");
+if (slideGallery) {
+  const gallerySlide = new GallerySlide(
+    ".gallery-slide",
+    ".product-gallery__list .prev",
+    ".product-gallery__list .next"
+  );
+  gallerySlide.init();
+}
+
 const statusExist = document.querySelector(".order-status");
 if (statusExist) {
   const colorChange = new ChangeColor(".order-status");

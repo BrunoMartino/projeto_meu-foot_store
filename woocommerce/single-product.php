@@ -15,9 +15,13 @@ if (have_posts()) {
 ?>
   <div class="product-gallery" data-gallery="gallery">
     <div class="product-gallery__list">
+      <div class='prev'></div>
+      <ul class='gallery-slide'>
       <?php foreach($product_data['gallery'] as $img) { ?>
-        <img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $product_data['name']; ?>" loading='lazy'>
+        <li class='gallery-slide__img'><img data-gallery="gallery-list" src="<?= $img; ?>" alt="<?= $product_data['name']; ?>" loading='lazy'></li>
         <?php } ?>
+      </ul>
+      <div class='next'></div>
     </div>
     <div class="product-gallery__main">
         <img data-gallery="gallery-main" src="<?= $product_data['img']; ?>" alt="<?= $product_data['name']; ?>" loading='lazy'>

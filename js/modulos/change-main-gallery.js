@@ -12,7 +12,15 @@ export default class ChangeGallery {
   }
   addListChangeEvent() {
     this.galleryList.forEach((img) => {
-      img.addEventListener("mouseover", this.changeImage);
+      img.addEventListener("click", this.changeImage);
+    });
+    this.galleryList.forEach((img) => {
+      img.addEventListener("click", () => {
+        this.galleryList.forEach((obj) => {
+          obj.classList.remove("ativo");
+        });
+        img.classList.add("ativo");
+      });
     });
   }
   addSwatchesChangeEvent() {
